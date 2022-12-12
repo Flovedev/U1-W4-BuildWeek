@@ -20,9 +20,9 @@ function showResults() {
     document.getElementById("number_of_wrong_answers").innerText = `${numberOfWrongAnswers}/${totalQuestions} questions`;
 
     //creating the elements for the central message
-    let congratulationsOrCondolences = "";
-    let messageOfSuccessOrFail = "";
-    let messageWhatHappensNext = "";
+    let congratulationsOrCondolences = document.createElement("p");
+    let messageOfSuccessOrFail = document.createElement("p");
+    let messageWhatHappensNext = document.createElement("p");
 
     //adding classes to the elements
     congratulationsOrCondolences.classList.add("congratulations_or_condolences");
@@ -33,16 +33,16 @@ function showResults() {
     if (percentageOfCorrectAnswers >= 60) {
         congratulationsOrCondolences.innerText = "Congratulations!";
         messageOfSuccessOrFail.innerText = "You passed the exam.";
-        messageWhatHappensNext.innerText = "We'll you the certificate in few mintutes. Check your email (including promotions / spam folder)"
+        messageWhatHappensNext.innerText = "We'll you the certificate in few mintutes. \nCheck your email (including promotions / spam folder)"
     } else {
         congratulationsOrCondolences.innerText = "We are sorry."
         messageOfSuccessOrFail.innerText = "You didn't passed the exam.";
-        messageWhatHappensNext.innerText = "We'll contact you in a few minutes"
+        messageWhatHappensNext.innerText = "We'll contact you in a few minutes to send you the informations concerning your assessment interview. \nCheck your email (including promotions / spam folder)"
     }
 
     //appending elements to the message container
-    document.getElementById("correct_answer_container").appendChild("congratulationsOrCondolences");
-    document.getElementById("correct_answer_container").appendChild("messageOfSuccessOrFail");
-    document.getElementById("correct_answer_container").appendChild("messageWhatHappensNext");
+    document.getElementById("notification_for_passing").appendChild(congratulationsOrCondolences);
+    document.getElementById("notification_for_passing").appendChild(messageOfSuccessOrFail);
+    document.getElementById("notification_for_passing").appendChild(messageWhatHappensNext);
 
 }
