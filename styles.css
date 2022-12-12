@@ -1,9 +1,13 @@
 body {
     margin: 0px;
     background-color: black;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
 
 #main-container {
+    position: relative;
+    margin-top: 50px;
     width: 1024px;
     height: 768px;
     background-image: url(./assets/bg.jpg);
@@ -12,9 +16,106 @@ body {
 
 #logo img {
     display: inline-block;
-
     width: 156px;
     height: auto;
     margin-top: 50px;
     margin-left: 85px;
+}
+
+#questions-timer {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border: 10px solid rgb(108, 189, 192);
+    border-radius: 50%;
+}
+
+#questions-timer p {
+    margin: 0px;
+    text-align: center;
+}
+
+#seconds {
+    font-weight: bold;
+    font-size: 8px;
+}
+
+#counter {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#remaining {
+    font-size: 7px;
+}
+
+
+.donut {
+    background: #000;
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid red;
+}
+
+#questions-container {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+    left: 10%;
+    width: auto;
+    height: 400px;
+    /* border: 2px solid; */
+}
+
+#questions {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#questions span {
+    font-weight: bolder;
+}
+
+.answers {
+    display: inline-block;
+    text-align: center;
+    width: 352px;
+    height: auto;
+    margin: 10px 20px 10px 28px;
+    border: 2px solid;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.answers p {
+    padding: 10px 5px 10px 5px;
+
+}
+
+#questions-count {
+    position: absolute;
+    right: 44%;
+    bottom: 7%;
+}
+
+#questions-count span {
+    color: rgb(211, 43, 226);
+}
+
+.hide {
+    display: none;
+}
+
+.pink-background {
+    background-color: pink;
 }
