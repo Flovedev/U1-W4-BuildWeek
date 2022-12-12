@@ -52,19 +52,6 @@ body {
     font-size: 7px;
 }
 
-
-.donut {
-    background: #000;
-    display: block;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 10px solid red;
-}
-
 #questions-container {
     position: absolute;
     top: 28%;
@@ -115,4 +102,22 @@ body {
 
 .selected-answer {
     background-color: rgb(161, 41, 141);
+}
+
+.donut {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(rgb(31, 30, 30) 0deg 80deg,
+            rgb(34, 167, 167) 80deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hole {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('./assets/bg.jpg');
 }

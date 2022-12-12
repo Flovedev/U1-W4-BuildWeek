@@ -5,5 +5,5 @@ function selectedAnswer(eventData) {
     if (previousSelected !== null) {
         previousSelected.classList.remove('selected-answer')
     }
-    clicledAnswer.classList.toggle('selected-answer')
+    clicledAnswer.classList.add('selected-answer')
 }
