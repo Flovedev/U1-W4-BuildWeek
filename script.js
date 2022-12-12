@@ -5,6 +5,7 @@ for (let i = 0; i < starsNode.length; i++) {
   let star = starsNode[i]; // each star selected using for loop
   star.addEventListener("click", function () {
     let numberOfStars = i + 1; // Storing the number of stars that user gave by printing out.
+    // star.classList.add("selectedStars"); // TODO: prevent commenting without voting with a star
     console.log(`User gave us ${numberOfStars} stars out of 10.`); // (Since 'i' is the index number it starts from 0. That's why I added 1 to i to get the actual number of stars.)
   });
 
@@ -21,7 +22,6 @@ for (let i = 0; i < starsNode.length; i++) {
 }
 
 function sendComment(eventData) {
-  // TODO: prevent commenting without voting with a star
   // function for saving the message inserted by the user
   let commentInput = document.getElementById("comment-input");
   if (eventData.key === "Enter") {
