@@ -26,6 +26,7 @@ body {
     text-align: center;
     color: #e7e7ec;
     font-family: 'Outfit', sans-serif;
+    display: none;
 }
 
 #feedback-page_content-container h1{
