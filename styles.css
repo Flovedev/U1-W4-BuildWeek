@@ -1,11 +1,6 @@
 body {
     margin: 0px;
     background-color: black;
-<<<<<<< HEAD
-}
-
-#main-container {
-=======
     font-family: 'Inter', sans-serif;
     color: white;
 }
@@ -13,7 +8,6 @@ body {
 #main-container {
     position: relative;
     margin-top: 50px;
->>>>>>> Flo
     width: 1024px;
     height: 768px;
     background-image: url(./assets/bg.jpg);
@@ -22,16 +16,10 @@ body {
 
 #logo img {
     display: inline-block;
-<<<<<<< HEAD
-
-=======
->>>>>>> Flo
     width: 156px;
     height: auto;
     margin-top: 50px;
     margin-left: 85px;
-<<<<<<< HEAD
-=======
 }
 
 #questions-timer {
@@ -132,5 +120,4 @@ body {
     height: 200px;
     border-radius: 50%;
     background-image: url('./assets/bg.jpg');
->>>>>>> Flo
 }
