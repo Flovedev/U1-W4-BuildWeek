@@ -16,35 +16,35 @@
     <div id="main-container">
         <div id="logo"><img src="assets/epicode_logo.png" alt="epiLogo"></div>
         <h1 class="hide">Welcome to your exam</h1>
-
-        <div id="questions-timer">
-            <div id="donut"></div>
-            <div id="time">
-                <p id="seconds">SECONDS</p>
-                <p id="counter"> 16</p>
-                <p id="remaining">REMAINING</p>
-            </div>
-        </div>
-
-        <div id="questions-container">
-            <div id="questions">How can I create a <span>checkbox in HTML?</span></div>
-            <div id="answers-container">
-                <div class="answers">
-                    <p>Answer blablabla 1, Answer blablabla 1
-                    </p>
-                </div>
-                <div class="answers">
-                    <p>Answer blablabla 2</p>
-                </div>
-                <div class="answers">
-                    <p>Answer blablabla 3</p>
-                </div>
-                <div class="answers">
-                    <p>Answer blablabla 4</p>
+        <div id="questions-part">
+            <div id="questions-timer">
+                <div id="donut"></div>
+                <div id="time">
+                    <p id="seconds">SECONDS</p>
+                    <p id="counter"> 16</p>
+                    <p id="remaining">REMAINING</p>
                 </div>
             </div>
+
+            <div id="questions-container">
+                <div id="questions">How can I create a <span>checkbox in HTML?</span></div>
+                <div id="answers-container">
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 1, Answer blablabla 1
+                    </div>
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 2
+                    </div>
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 3
+                    </div>
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 4
+                    </div>
+                </div>
+            </div>
+            <div id="questions-count">QUESTION 10 <span>/ 10</span></div>
         </div>
-        <div id="questions-count">QUESTION 10 <span>/ 10</span></div>
     </div>
     </div>
 

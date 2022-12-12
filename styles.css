@@ -85,21 +85,18 @@ body {
     font-weight: bolder;
 }
 
-.answers {
+#answers-container {}
+
+#answers-container .answers {
     display: inline-block;
     text-align: center;
-    width: 352px;
+    width: 345px;
     height: auto;
     margin: 10px 20px 10px 28px;
     border: 2px solid;
     border-radius: 50px;
-    backdrop-filter: blur(10px);
     cursor: pointer;
-}
-
-.answers p {
-    padding: 10px 5px 10px 5px;
-
+    padding: 20px 5px 20px 5px;
 }
 
 #questions-count {
@@ -116,6 +113,6 @@ body {
     display: none;
 }
 
-.pink-background {
-    background-color: pink;
+.selected-answer {
+    background-color: rgb(161, 41, 141);
 }
