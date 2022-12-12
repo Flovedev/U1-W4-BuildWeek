@@ -1,4 +1,4 @@
-let totalScore = 6;
+let totalScore = 3;
 let totalQuestions = 10;
 
 function showResults() {
@@ -36,7 +36,7 @@ function showResults() {
         messageWhatHappensNext.innerText = "We'll you the certificate in few mintutes. \nCheck your email (including promotions / spam folder)"
     } else {
         congratulationsOrCondolences.innerText = "We are sorry."
-        messageOfSuccessOrFail.innerText = "You didn't passed the exam.";
+        messageOfSuccessOrFail.innerText = "You didn't pass the exam.";
         messageWhatHappensNext.innerText = "We'll contact you in a few minutes to send you the informations concerning your assessment interview. \nCheck your email (including promotions / spam folder)"
     }
 
@@ -50,6 +50,7 @@ function showResults() {
 
 let buttonToRatingNode = document.getElementById('button_to_rating');
 buttonToRatingNode.addEventListener('click', () =>{
+    console.log(buttonToRatingNode);
     document.getElementById('result_page_container').style.display = "none";
     document.getElementById('feedback-page_content-container').style.display = "inline-block";
 
