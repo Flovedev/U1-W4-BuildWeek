@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="result-styles.css">
     <title>Build Week. EPICODE Benchmark</title>
 </head>
 
@@ -62,6 +63,31 @@
             </div>
             <div id="questions-count">QUESTION 10 <span>/ 10</span></div>
         </div>
+        
+        <div id="result_page_container">
+            <div id="result_title"> 
+                <h1>Results</h1>
+                <p>The summary of your answers:</p>
+            </div>
+            
+            <div id="result_display_container">
+                <div id="correct_answer_container">
+                    <h2>Correct</h2>
+                    <p id="percentage_of_correct_answers"></p>
+                    <p id="number_of_correct_answers"></p>
+                </div>
+                <div id="notification_for_passing"></div>
+                <div id="wrong_answer_container">
+                    <h2>Wrong</h2>
+                    <p id="percentage_of_wrong_answers"></p>
+                    <p id="number_of_wrong_answers"></p>
+                </div>
+            </div>
+
+            <div id="result_footer">
+                <input type="button" value="RATE US" id="button_to_rating">
+            </div id="result_footer">
+        </div>
     </div>
     </div>
 
@@ -72,6 +98,7 @@
 
     <script src="./script.js"></script>
     <script src="welcome.js"></script>
+    <script src="result-index.js"></script>
 
 </body>
 
