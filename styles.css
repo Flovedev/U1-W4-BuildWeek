@@ -1,22 +1,20 @@
 body {
     margin: 0px;
-    background-color: rgb(10, 10, 10);
+    background-color: black;
 }
 
 #main-container {
-    background-color: purple;
     width: 1024px;
     height: 768px;
+    background-image: url(./assets/bg.jpg);
     margin-inline: auto;
 }
 
-#questions-logo {
+#logo img {
+    display: inline-block;
+
     width: 156px;
     height: auto;
-    width: ;
-}
-
-#questions-logo img {
-    max-width: 100%;
-    max-height: 100%;
+    margin-top: 50px;
+    margin-left: 85px;
 }
