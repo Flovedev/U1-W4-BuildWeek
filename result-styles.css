@@ -102,18 +102,8 @@ body {
     font-size: 20px;
     width: 200px;
     height: 55px;
-    border: 1px solid white;
+    border: 2px solid white;
     cursor: pointer;
 }
 
 
-
-/*
-.result_flex_wrapper {
-	display: flex;
-	min-height: 100vh;
-}
-
-#result_donut {
-	margin: auto;
-}
