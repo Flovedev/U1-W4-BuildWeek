@@ -1,0 +1,51 @@
+#welcomePage{
+    margin-left: 9%;
+}
+h3{
+    font-family: Outfit, sans-serif;
+    font-size: 27px;
+    color: #D20094;
+    font-weight:bolder;
+}
+p{
+    font-family: Inter, sans-serif;
+    max-width: 60%;
+    font-size: 16px;
+}
+ul{
+    font-family: Inter, sans-serif;
+    font-size: 15.5px;
+    margin: 40px 0;
+}
+#proceed{
+    background-color:none;
+}
+input[type=button]{
+    background: #00ffff;
+    padding: 20px 45px;
+    color: #000000;
+    display: inline-block;
+    font: normal bold 26px/1 "Roboto", sans-serif;
+    text-align: center;
+    margin-left: 200px;
+    border-color:transparent;
+
+}
+input[type=checkbox]{
+    outline: 1px solid #ffffff;
+}
+input[type=checkbox]:checked{
+    display: inline-block;
+}
+input[type=button]:hover{
+    box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
+    -webkit-box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
+    -moz-box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
+    accent-color: #00FFFF;
+}
+input[type=button]:active{
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+}
