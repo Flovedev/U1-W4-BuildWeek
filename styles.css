@@ -62,13 +62,13 @@
     padding: 20px 5px 20px 5px;
 }
 
-#questions-count {
+.questions-count {
     position: absolute;
     right: 44%;
     bottom: 7%;
 }
 
-#questions-count span {
+.questions-count span {
     color: rgb(211, 43, 226);
 }
 

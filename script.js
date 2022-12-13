@@ -110,8 +110,10 @@ function selectedAnswer(eventData) {
     clicledAnswer.classList.add('selected-answer')
 }
 
+let questionNumer = 1
 function displayQuestion() {
     let allNode = document.querySelector('#questions-part')
+    let counterNode = document.querySelector('.questions-count')
     let wrapNode = document.querySelector('.questions-container');
     let questionsNode = document.createElement('div')
     let answerContainerNode = document.createElement('div')
@@ -139,19 +141,29 @@ function displayQuestion() {
         answerContainerNode.appendChild(answer4Node)
         wrapNode.appendChild(questionsNode)
         wrapNode.appendChild(answerContainerNode)
+        counterNode.innerHTML = `QUESTION ${questionNumer} <span>/ ${questions.length}</span>`
+        // wrapNode.classList.add(`P${index}`)
 
         allNode.appendChild(wrapNode.cloneNode(true))
+        allNode.appendChild(counterNode.cloneNode(true))
+
     }
 
     let containerCount = document.getElementsByClassName('questions-container')
+    let containerNum = document.getElementsByClassName('questions-count')
 
     for (let index = 1; index < containerCount.length; index++) {
         const element = containerCount[index];
         element.classList.add('hide')
     }
+    for (let index = 1; index < containerNum.length; index++) {
+        const element = containerNum[index];
+        element.classList.add('hide')
+    }
+
 }
 displayQuestion()
 
 function nextQuestion() {
-
+    questionNumber++
 }
