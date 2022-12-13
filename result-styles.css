@@ -3,29 +3,47 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     text-align: center;
-    display: inline;
+    display: inline-block;
+}
+#result_page_container{
+    height: 100vh;
+    width: 100vw;
+    line-height: 5vh;
+    margin-top: 10vh;
 }
 
+/* the title */
 #result_title{
     color: white;
     font-family: 'Outfit', sans-serif;
     font-size: 25px;
 }
 
-#result_title h1 {
+/* #result_title h1 {
     margin-bottom: 0;
-}
+} */
 
-#result_title p {
+/* #result_title p {
     margin-top: 0;
+} */
+
+
+/* main container */
+
+/* general */
+#result_display_container {
+    display: flex;
+    justify-content: space-around;
+    height: 40em;
+    align-items: center;
 }
 
-
+/* sides */
 #correct_answer_container, #wrong_answer_container {
     display: inline-block;
     width: 20%;
     font-family: 'Inter', sans-serif;
-    margin: 30px;
+    
 }
 
 #correct_answer_container h2 {
@@ -45,16 +63,20 @@
     margin-top: 0;
 }
 
+/* center */
 #notification_for_passing {
+   text-align: center;
+
+}
+
+#result_donut {
+    margin: 10px auto;
     display: inline-block;
-    width: 170px;
-    height: 170px;
-    border: 45px solid;
-    border-radius: 50%;
-    border-image:   linear-gradient(to left, #D20094 50%, #00FFFF 50%) 1;
-    margin-inline: auto;
-    margin: 50px auto;
-    padding: 30px;
+
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    width: 40em;
 }
 
 .congratulations_or_condolences {
@@ -74,6 +96,20 @@
     margin-top: 25px;
 }
 
+svg circle {
+    stroke-dasharray: 140px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: butt;
+    stroke-width: 11px;
+    stroke: white;
+    fill: none;
+    animation: countdown 10s linear infinite forwards;
+}
+
+
+/* footer */
+
+
 
 #button_to_rating {
     background: none;
@@ -85,4 +121,8 @@
     cursor: pointer;
 }
 
+/* the donut */
 
+  
+
+ 

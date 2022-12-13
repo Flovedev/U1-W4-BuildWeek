@@ -1,5 +1,6 @@
 #welcomePage{
     margin-left: 9%;
+    display: none;
 }
 h3{
     font-family: Outfit, sans-serif;

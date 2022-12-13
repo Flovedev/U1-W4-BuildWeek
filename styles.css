@@ -48,7 +48,9 @@
     font-weight: bolder;
 }
 
-#answers-container {}
+#questions-part {
+    display: none;
+}
 
 #answers-container .answers {
     display: inline-block;

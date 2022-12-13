@@ -47,6 +47,8 @@ function showResults() {
 
 }
 
+showResults();
+
 
 let buttonToRatingNode = document.getElementById('button_to_rating');
 buttonToRatingNode.addEventListener('click', () =>{
@@ -55,3 +57,11 @@ buttonToRatingNode.addEventListener('click', () =>{
     document.getElementById('feedback-page_content-container').style.display = "inline-block";
 
 })
+
+//the donut
+
+
+
+
+
+
