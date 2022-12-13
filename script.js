@@ -110,43 +110,62 @@ function selectedAnswer(eventData) {
     clicledAnswer.classList.add('selected-answer')
 }
 
-let questionNumer = 1
+let questionNumber = 1
 function displayQuestion() {
     let allNode = document.querySelector('#questions-part')
     let counterNode = document.querySelector('.questions-count')
     let wrapNode = document.querySelector('.questions-container');
     let questionsNode = document.createElement('div')
     let answerContainerNode = document.createElement('div')
-    let answer1Node = document.createElement('div')
-    let answer2Node = document.createElement('div')
-    let answer3Node = document.createElement('div')
-    let answer4Node = document.createElement('div')
+
+    let answerNode = [];
+    for(let i = 0; i < 4; i++){
+        answerNode[i] = document.createElement('div');
+    }
+    // let answer1Node = document.createElement('div')
+    // let answer2Node = document.createElement('div')
+    // let answer3Node = document.createElement('div')
+    // let answer4Node = document.createElement('div')
 
     for (let index = 0; index < questions.length; index++) {
         const element = questions[index];
 
-        questionsNode.innerText = element.question
+        let answer = []
+        answer.push(element.correct_answer)
+        for(let i = 1; i<element.correct_answer.length; i++){
+                answer.push(element.incorrect_answers[i])
+            
+        }
+        
+
         questionsNode.classList.add('questions')
-        answer1Node.innerText = element.correct_answer
-        answer1Node.classList.add('answers')
-        answer2Node.innerText = element.incorrect_answers[0]
-        answer2Node.classList.add('answers')
-        answer3Node.innerText = element.incorrect_answers[1]
-        answer3Node.classList.add('answers')
-        answer4Node.innerText = element.incorrect_answers[2]
-        answer4Node.classList.add('answers')
-        answerContainerNode.appendChild(answer1Node)
-        answerContainerNode.appendChild(answer2Node)
-        answerContainerNode.appendChild(answer3Node)
-        answerContainerNode.appendChild(answer4Node)
+        for(let i = 0; i < answerNode.length; i++){
+            answer.sort(() =>0.5, Math.random())
+            answerNode[i].innerText = answer[i];
+
+
+            answerNode[i].classList.add('answers');
+            answerContainerNode.appendChild(answerNode[i]);
+        }
+        // answer1Node.innerText = element.correct_answer
+        // answer1Node.classList.add('answers')
+        // answer2Node.innerText = element.incorrect_answers[0]
+        // answer2Node.classList.add('answers')
+        // answer3Node.innerText = element.incorrect_answers[1]
+        // answer3Node.classList.add('answers')
+        // answer4Node.innerText = element.incorrect_answers[2]
+        // answer4Node.classList.add('answers')
+        // answerContainerNode.appendChild(answer1Node)
+        // answerContainerNode.appendChild(answer2Node)
+        // answerContainerNode.appendChild(answer3Node)
+        // answerContainerNode.appendChild(answer4Node)
         wrapNode.appendChild(questionsNode)
         wrapNode.appendChild(answerContainerNode)
-        counterNode.innerHTML = `QUESTION ${questionNumer} <span>/ ${questions.length}</span>`
+        counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
         // wrapNode.classList.add(`P${index}`)
 
         allNode.appendChild(wrapNode.cloneNode(true))
         allNode.appendChild(counterNode.cloneNode(true))
-
     }
 
     let containerCount = document.getElementsByClassName('questions-container')
@@ -160,10 +179,10 @@ function displayQuestion() {
         const element = containerNum[index];
         element.classList.add('hide')
     }
-
 }
 displayQuestion()
 
 function nextQuestion() {
-    questionNumber++
+    questionNumber++;
+
 }
