@@ -1,5 +1,9 @@
 #welcomePage{
     margin-left: 9%;
+    height: 100vh;
+    width: 100vw;
+    line-height: 5vh;
+    margin-top: 10vh;
 }
 h3{
     font-family: Outfit, sans-serif;
@@ -27,7 +31,7 @@ input[type=button]{
     display: inline-block;
     font: normal bold 26px/1 "Roboto", sans-serif;
     text-align: center;
-    margin-left: 200px;
+    margin-left: 73vh;
     border-color:transparent;
 
 }
