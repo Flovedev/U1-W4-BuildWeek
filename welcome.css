@@ -5,6 +5,7 @@
     line-height: 5vh;
     margin-top: 10vh;
 }
+
 h3{
     font-family: Outfit, sans-serif;
     font-size: 27px;
@@ -21,9 +22,6 @@ ul{
     font-size: 15.5px;
     margin: 40px 0;
 }
-#proceed{
-    background-color:none;
-}
 input[type=button]{
     background: #00ffff;
     padding: 20px 45px;
@@ -35,12 +33,26 @@ input[type=button]{
     border-color:transparent;
 
 }
-input[type=checkbox]{
-    outline: 1px solid #ffffff;
-}
-input[type=checkbox]:checked{
+input[type="checkbox"] {
+    display: none;
+  }
+input[type="checkbox"] + *::before {
+    content: "";
     display: inline-block;
-}
+    vertical-align: bottom;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.3vh;
+    border-color: white;
+    margin-bottom: 2.2vh;
+  }
+  input[type="checkbox"]:checked + *::before {
+    color: white;
+    background: white;
+  }
+
 input[type=button]:hover{
     box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
     -webkit-box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
