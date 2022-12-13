@@ -11,6 +11,7 @@ function showResults() {
     let percentageOfCorrectAnswers = numberOfCorrectAnswers/totalQuestions * 100;
     let percentageOfWrongAnswers = numberOfWrongAnswers/totalQuestions * 100;
 
+    //document.querySelector("avg").setAttribute("stroke-dasharray", circleDasharray)
 
     //adding inner text
     document.getElementById("percentage_of_correct_answers").innerText = `${percentageOfCorrectAnswers}%`
@@ -57,8 +58,6 @@ buttonToRatingNode.addEventListener('click', () =>{
     document.getElementById('feedback-page_content-container').style.display = "inline-block";
 
 })
-
-//the donut
 
 
 

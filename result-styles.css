@@ -3,29 +3,34 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 #result_page_container{
     height: 100vh;
     width: 100vw;
     line-height: 5vh;
-    margin-top: 10vh;
+    margin-top: 0;
 }
 
 /* the title */
 #result_title{
     color: white;
     font-family: 'Outfit', sans-serif;
-    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* #result_title h1 {
+#result_title h1 {
     margin-bottom: 0;
-} */
+    font-size: 2em;
+}
 
-/* #result_title p {
-    margin-top: 0;
-} */
+#result_title p {
+    margin: 0;
+}
 
 
 /* main container */
@@ -34,19 +39,21 @@
 #result_display_container {
     display: flex;
     justify-content: space-around;
-    height: 40em;
+    height: 30em;
     align-items: center;
 }
 
 /* sides */
 #correct_answer_container, #wrong_answer_container {
-    display: inline-block;
     width: 20%;
     font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 
-#correct_answer_container h2 {
+#correct_answer_container h2, #wrong_answer_container h2 {
     margin-bottom: 0;
     font-size: 40px;
 }
@@ -56,54 +63,54 @@
     font-size: 45px;
     margin: 0;
     font-weight: bold;
+    
 }
 
-#number_of_correct_answers {
+#number_of_correct_answers, #number_of_wrong_answers {
     font-family: 'Outfit', sans-serif;
     margin-top: 0;
 }
 
 /* center */
 #notification_for_passing {
-   text-align: center;
-
-}
-
-#result_donut {
-    margin: 10px auto;
-    display: inline-block;
-
-    position: absolute;
-    top: 25%;
-    left: 32%;
-    width: 40em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
 }
 
 .congratulations_or_condolences {
-    margin-bottom: 0;
+    margin: 0;
     font-weight: bold;
 }
 
 .message_of_success_or_failure {
     color: #00FFFF;
-    margin-top: 0;
+    margin: 0;
     font-weight: bold;
 }
 
 .message_what_happens_next {
     font-size: 12px;
     line-height: 16px;
-    margin-top: 25px;
+    margin-top: 0;
+    width: 40em;
 }
 
+
+#result_donut {
+    display: flex;
+
+    position: absolute;
+    width: 40em;
+}
 svg circle {
     stroke-dasharray: 140px;
     stroke-dashoffset: 0px;
     stroke-linecap: butt;
-    stroke-width: 11px;
+    stroke-width: 8px;
     stroke: white;
     fill: none;
-    animation: countdown 10s linear infinite forwards;
 }
 
 
@@ -119,9 +126,15 @@ svg circle {
     height: 55px;
     border: 2px solid white;
     cursor: pointer;
+    margin: auto;
 }
 
-/* the donut */
+#result_footer {
+
+    display: flex;
+    justify-content: center;
+}
+
 
   
 
