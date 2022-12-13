@@ -28,7 +28,7 @@
     font-size: 7px;
 }
 
-#questions-container {
+.questions-container {
     position: absolute;
     top: 28%;
     right: 10%;
@@ -38,19 +38,19 @@
     /* border: 2px solid; */
 }
 
-#questions {
+.questions {
     font-size: 50px;
     text-align: center;
     margin-bottom: 40px;
 }
 
-#questions span {
+.questions span {
     font-weight: bolder;
 }
 
-#answers-container {}
 
-#answers-container .answers {
+
+.answers {
     display: inline-block;
     text-align: center;
     width: 345px;
