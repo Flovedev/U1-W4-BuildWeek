@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="result-styles.css">
+    <title>Build Week. EPICODE Benchmark</title>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="logo"><img src="assets/epicode_logo.png" alt="epiLogo"></div>
+        <div id="welcomePage">
+            <h1>Welcome to <span id="title">your exam</span></h1>
+            <h3>Instructions</h3>
+            <p>We dont expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.</p>
+            <ul>
+                <li>Each question is <b>timed</b> and can only be <b>answered once</b>.</li>
+                <li>Changing browser tab or opening other windows will <b>invalidate the question</b>.</li>
+                <li>This exam will take approx. <b>0-5 minutes.</b></li>
+            </ul>
+
+            <input type="checkbox" id="proceed"> <label for="proceed">I promise to answer myself without help from anyone</label>
+                <input type="button" value="Proceed" id="proceedBtn">
+            
+        </div>
+       
+        <div id="questions-part">
+          <h1 class="hide">Welcome to your exam</h1>
+            <div id="questions-timer">
+                <div id="donut"></div>
+                <div id="time">
+                    <p id="seconds">SECONDS</p>
+                    <p id="counter"> 16</p>
+                    <p id="remaining">REMAINING</p>
+                </div>
+            </div>
+
+            <div id="questions-container">
+                <div id="questions">How can I create a <span>checkbox in HTML?</span></div>
+                <div id="answers-container">
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 1, Answer blablabla 1
+                    </div>
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 2
+                    </div>
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 3
+                    </div>
+                    <div class="answers" onclick="selectedAnswer(event)">
+                        Answer blablabla 4
+                    </div>
+                </div>
+            </div>
+            <div id="questions-count">QUESTION 10 <span>/ 10</span></div>
+        </div>
+        
+        <div id="result_page_container">
+            <div id="result_title"> 
+                <h1>Results</h1>
+                <p>The summary of your answers:</p>
+            </div>
+            
+            <div id="result_display_container">
+                <div id="correct_answer_container">
+                    <h2>Correct</h2>
+                    <p id="percentage_of_correct_answers"></p>
+                    <p id="number_of_correct_answers"></p>
+                </div>
+                <div id="notification_for_passing"></div>
+                <div id="wrong_answer_container">
+                    <h2>Wrong</h2>
+                    <p id="percentage_of_wrong_answers"></p>
+                    <p id="number_of_wrong_answers"></p>
+                </div>
+            </div>
+
+            <div id="result_footer">
+                <input type="button" value="RATE US" id="button_to_rating">
+            </div id="result_footer">
+        </div>
+    </div>
+    </div>
+
+    <!-- TODO timer -->
+    <!-- <div class="donut">
+        <div class="hole"></div>
+    </div> -->
+
+    <script src="./script.js"></script>
+    <script src="welcome.js"></script>
+    <script src="result-index.js"></script>
+
+</body>
+
+</html>
