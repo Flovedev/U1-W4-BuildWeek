@@ -130,16 +130,25 @@ function displayQuestion() {
 
         
         for(let i = 0; i < answer.length; i++){ 
-            console.log(answer.length)
             let answerNode = document.createElement('div');
+            
             answerNode.innerText = answer[i];
-            answerNode.classList.add('answers');
+            answerNode.classList.add('answers');  
             answerContainerNode.appendChild(answerNode);
-        }
-        console.log(answerContainerNode)
+            answerContainerNode.setAttribute('id', index+1)
+            console.log(answerContainerNode.getAttribute('id'))
+            
+}
+        if(answerContainerNode.getAttribute('id') != questionNumber){
+                answerContainerNode.classList.add('hide');
+                wrapNode.appendChild(questionsNode)
+                wrapNode.appendChild(answerContainerNode)
+            }else{
+                wrapNode.appendChild(questionsNode)
+                wrapNode.appendChild(answerContainerNode)
+            }
     
-        wrapNode.appendChild(questionsNode)
-        wrapNode.appendChild(answerContainerNode)
+        
         counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
         // wrapNode.classList.add(`P${index}`)
 
