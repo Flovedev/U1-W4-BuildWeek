@@ -118,47 +118,26 @@ function displayQuestion() {
     let questionsNode = document.createElement('div')
     let answerContainerNode = document.createElement('div')
 
-    let answerNode = [];
-    for(let i = 0; i < 4; i++){
-        answerNode[i] = document.createElement('div');
-    }
-    // let answer1Node = document.createElement('div')
-    // let answer2Node = document.createElement('div')
-    // let answer3Node = document.createElement('div')
-    // let answer4Node = document.createElement('div')
-
+    questionsNode.classList.add('questions')
     for (let index = 0; index < questions.length; index++) {
         const element = questions[index];
 
-        let answer = []
+        let answer = element.incorrect_answers;
         answer.push(element.correct_answer)
-        for(let i = 1; i<element.correct_answer.length; i++){
-                answer.push(element.incorrect_answers[i])
-            
-        }
         
+        
+        answer.sort(() =>0.5 - Math.random())
 
-        questionsNode.classList.add('questions')
-        for(let i = 0; i < answerNode.length; i++){
-            answer.sort(() =>0.5, Math.random())
-            answerNode[i].innerText = answer[i];
-
-
-            answerNode[i].classList.add('answers');
-            answerContainerNode.appendChild(answerNode[i]);
+        
+        for(let i = 0; i < answer.length; i++){ 
+            console.log(answer.length)
+            let answerNode = document.createElement('div');
+            answerNode.innerText = answer[i];
+            answerNode.classList.add('answers');
+            answerContainerNode.appendChild(answerNode);
         }
-        // answer1Node.innerText = element.correct_answer
-        // answer1Node.classList.add('answers')
-        // answer2Node.innerText = element.incorrect_answers[0]
-        // answer2Node.classList.add('answers')
-        // answer3Node.innerText = element.incorrect_answers[1]
-        // answer3Node.classList.add('answers')
-        // answer4Node.innerText = element.incorrect_answers[2]
-        // answer4Node.classList.add('answers')
-        // answerContainerNode.appendChild(answer1Node)
-        // answerContainerNode.appendChild(answer2Node)
-        // answerContainerNode.appendChild(answer3Node)
-        // answerContainerNode.appendChild(answer4Node)
+        console.log(answerContainerNode)
+    
         wrapNode.appendChild(questionsNode)
         wrapNode.appendChild(answerContainerNode)
         counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
