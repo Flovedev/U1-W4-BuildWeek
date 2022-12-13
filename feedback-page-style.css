@@ -1,24 +1,3 @@
-body {
-    margin: 0px;
-    background-color: black;
-}
-
-#main-container {
-    width: 1024px;
-    height: 768px;
-    background-image: url(./assets/bg.jpg);
-    margin-inline: auto;
-}
-
-#logo img {
-    display: inline-block;
-
-    width: 156px;
-    height: auto;
-    margin-top: 50px;
-    margin-left: 85px;
-}
-
 /*-------------------------------FEEDBACK PAGE SPECIFIC STYLE CODES-----------------------------------------*/
 
 #feedback-page_content-container {
