@@ -15,6 +15,7 @@
     letter-spacing: 1px;
     cursor: default;
     user-select: none;
+    margin-inline: auto;
 }
 
 #feedback-page_content-container h2 {
