@@ -124,31 +124,29 @@ function displayQuestion() {
 
         let answer = element.incorrect_answers;
         answer.push(element.correct_answer)
-        
-        
-        answer.sort(() =>0.5 - Math.random())
+        answer.sort(() => 0.5 - Math.random())
 
-        
-        for(let i = 0; i < answer.length; i++){ 
+
+        for (let i = 0; i < answer.length; i++) {
             let answerNode = document.createElement('div');
-            
+
             answerNode.innerText = answer[i];
-            answerNode.classList.add('answers');  
+            answerNode.classList.add('answers');
             answerContainerNode.appendChild(answerNode);
-            answerContainerNode.setAttribute('id', index+1)
+            answerContainerNode.setAttribute('id', index + 1)
             console.log(answerContainerNode.getAttribute('id'))
-            
-}
-        if(answerContainerNode.getAttribute('id') != questionNumber){
-                answerContainerNode.classList.add('hide');
-                wrapNode.appendChild(questionsNode)
-                wrapNode.appendChild(answerContainerNode)
-            }else{
-                wrapNode.appendChild(questionsNode)
-                wrapNode.appendChild(answerContainerNode)
-            }
-    
-        
+
+        }
+        if (answerContainerNode.getAttribute('id') !== questionNumber) {
+            answerContainerNode.classList.add('hide');
+            wrapNode.appendChild(questionsNode)
+            wrapNode.appendChild(answerContainerNode)
+        } else {
+            wrapNode.appendChild(questionsNode)
+            wrapNode.appendChild(answerContainerNode)
+        }
+
+
         counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
         // wrapNode.classList.add(`P${index}`)
 
