@@ -106,6 +106,7 @@
     stroke: #00FFFF;
     fill: none;
     animation: countdown 20s linear infinite forwards;
+    animation: countdown 20s linear infinite forwards;
 }
 
 .greyish-circle {

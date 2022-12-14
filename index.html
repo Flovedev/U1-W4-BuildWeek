@@ -39,8 +39,12 @@
 
         <div id="questions-part">
             <h1 class="hide">Welcome to your exam</h1>
+            <div id="questions-timer">
+                <div id="donut"></div>
 
-        <div class="questions-container">
+            </div>
+
+            <div class="questions-container">
 
         </div>
         <div id="timer">
@@ -63,24 +67,25 @@
             <p>The summary of your answers:</p>
         </div>
 
-        <div id="result_display_container" class="hide">
-            <div id="correct_answer_container">
-                <h2>Correct</h2>
-                <p id="percentage_of_correct_answers"></p>
-                <p id="number_of_correct_answers"></p>
+            <div id="result_display_container" class="hide">
+                <div id="correct_answer_container">
+                    <h2>Correct</h2>
+                    <p id="percentage_of_correct_answers"></p>
+                    <p id="number_of_correct_answers"></p>
+                </div>
+                <div id="notification_for_passing"></div>
+                <div id="wrong_answer_container">
+                    <h2>Wrong</h2>
+                    <p id="percentage_of_wrong_answers"></p>
+                    <p id="number_of_wrong_answers"></p>
+                </div>
             </div>
-            <div id="notification_for_passing"></div>
-            <div id="wrong_answer_container">
-                <h2>Wrong</h2>
-                <p id="percentage_of_wrong_answers"></p>
-                <p id="number_of_wrong_answers"></p>
-            </div>
-        </div>
 
         <div id="result_footer" class="hide">
             <input type="button" value="RATE US" id="button_to_rating">
         </div>
     </div>
+
 
     <div id="feedback-page_content-container">
             <h1>Tell us how it's going</h1>
@@ -127,6 +132,7 @@
                 <div id="more-information-button">MORE INFO</div>
             </a>
         </div> <!-- FEEDBACK PAGE CLOSING TAG -->
+
 
 
     </div> <!-- MAIN CONTAINER CLOSING TAG -->
