@@ -1,56 +1,33 @@
-#questions-timer {
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    border: 10px solid rgb(108, 189, 192);
-    border-radius: 50%;
-}
-
-#questions-timer p {
-    margin: 0px;
-    text-align: center;
-}
-
-#seconds {
-    font-weight: bold;
-    font-size: 8px;
-}
-
-#counter {
-    font-weight: bold;
-    font-size: 35px;
-}
-
-#remaining {
-    font-size: 7px;
-}
-
-#questions-container {
+.questions-container {
     position: absolute;
     top: 28%;
     right: 10%;
     left: 10%;
     width: auto;
     height: 400px;
-    /* border: 2px solid; */
+    /* background-color: rgb(31, 29, 29); */
 }
 
-#questions {
+.questions {
     font-size: 50px;
     text-align: center;
     margin-bottom: 40px;
 }
 
-#questions span {
+.questions span {
     font-weight: bolder;
 }
 
-#answers-container {}
+.question-quetions-part {
+    display: none;
 
-#answers-container .answers {
+    position: absolute;
+    height: 400px;
+    /* background-image: url('./assets/bg.jpg'); */
+}
+
+
+.answers {
     display: inline-block;
     text-align: center;
     width: 345px;
@@ -62,13 +39,13 @@
     padding: 20px 5px 20px 5px;
 }
 
-#questions-count {
+.questions-count {
     position: absolute;
     right: 44%;
     bottom: 7%;
 }
 
-#questions-count span {
+.questions-count span {
     color: rgb(211, 43, 226);
 }
 
@@ -80,20 +57,75 @@
     background-color: rgb(161, 41, 141);
 }
 
-.donut {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: conic-gradient(rgb(31, 30, 30) 0deg 80deg,
-            rgb(34, 167, 167) 80deg 360deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#timer {
+    position: relative;
+    top: -40px;
+    right: -1260px;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
 }
 
-.hole {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url('./assets/bg.jpg');
+#timer-number {
+    color: white;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#timer p {
+    font-size: 8px;
+    font-weight: 100;
+    margin: 0;
+}
+
+#seconds {
+    padding-top: 25px;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg) rotateZ(-90deg);
+}
+
+.countdown-circle {
+    z-index: 1;
+}
+
+.countdown-circle circle {
+    stroke-dasharray: 335px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: square;
+    stroke-width: 12px;
+    stroke: #00FFFF;
+    fill: none;
+    animation: countdown 5s linear infinite forwards;
+}
+
+.greyish-circle {
+    z-index: auto;
+}
+
+.greyish-circle circle {
+    stroke-dasharray: 335px;
+    stroke-dashoffset: 0px;
+    stroke-width: 12px;
+    stroke: rgba(219, 219, 219, 0.45);
+    fill: none;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+
+    to {
+        stroke-dashoffset: 335px;
+    }
 }
