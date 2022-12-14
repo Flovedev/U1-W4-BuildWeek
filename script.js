@@ -140,7 +140,7 @@ function displayQuestion() {
 
             answerNode.innerText = answer[i];
             answerNode.classList.add('answers');
-            // answerNode.addEventListener('click', nextQuestion());
+            answerNode.addEventListener('click', nextQuestion);
             answerContainerNode.appendChild(answerNode);
         }
 
