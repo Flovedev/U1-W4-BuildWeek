@@ -127,6 +127,7 @@ svg circle {
     border: 2px solid white;
     cursor: pointer;
     margin: auto;
+    z-index: 1;
 }
 
 #result_footer {

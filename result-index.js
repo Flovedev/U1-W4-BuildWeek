@@ -53,7 +53,7 @@ showResults();
 
 let buttonToRatingNode = document.getElementById('button_to_rating');
 buttonToRatingNode.addEventListener('click', () =>{
-    console.log(buttonToRatingNode);
+    console.log("works");
     document.getElementById('result_page_container').style.display = "none";
     document.getElementById('feedback-page_content-container').style.display = "inline-block";
 
