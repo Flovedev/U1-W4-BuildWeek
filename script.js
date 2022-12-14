@@ -99,18 +99,18 @@ const questions = [
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
 ]
-export let totalScore = 0
+ let totalScore = 0
 
 
-function selectedAnswer(eventData) {
-    let clicledAnswer = eventData.target
-    let previousSelected = document.querySelector('.selected-answer')
+// function selectedAnswer(eventData) {
+//     let clicledAnswer = eventData.target
+//     let previousSelected = document.querySelector('.selected-answer')
 
-    if (previousSelected !== null) {
-        previousSelected.classList.remove('selected-answer')
-    }
-    clicledAnswer.classList.add('selected-answer')
-}
+//     if (previousSelected !== null) {
+//         previousSelected.classList.remove('selected-answer')
+//     }
+//     clicledAnswer.classList.add('selected-answer')
+// }
 
 
 let questionNumber = 1
