@@ -25,11 +25,13 @@
 
 #result_title h1 {
     margin-bottom: 0;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #result_title p {
     margin: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2em;
 }
 
 
