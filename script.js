@@ -18,7 +18,7 @@ const questions = [
         type: "multiple",
         difficulty: "easy",
         question:
-            "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+            "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
         correct_answer: "Final",
         incorrect_answers: ["Static", "Private", "Public"],
     },
@@ -110,6 +110,7 @@ function selectedAnswer(eventData) {
     clicledAnswer.classList.add('selected-answer')
 }
 
+
 let questionNumber = 1
 function displayQuestion() {
 
@@ -127,6 +128,9 @@ function displayQuestion() {
         let answer = element.incorrect_answers;
         let allNode = document.createElement('div')
         allNode.classList.add('question-answer-container')
+        if (index !== 0) {
+            allNode.classList.add('hide')
+        }
         answer.push(element.correct_answer)
         answer.sort(() => 0.5 - Math.random())
 
@@ -136,9 +140,8 @@ function displayQuestion() {
 
             answerNode.innerText = answer[i];
             answerNode.classList.add('answers');
+            // answerNode.addEventListener('click', nextQuestion());
             answerContainerNode.appendChild(answerNode);
-
-
         }
 
         allNode.appendChild(questionsNode)
@@ -155,10 +158,59 @@ function displayQuestion() {
     let containerNum = document.getElementsByClassName('questions-count')
 
 
+
 }
 displayQuestion()
+
+let questionsArray = document.getElementsByClassName(
+    "question-answer-container"
+);
+
+// TIMER
+
+let timeBackwards = document.getElementById("timer-number");
+let time = 20;
+
+timeBackwards.textContent = time;
+
+let removeIndex = -1;
+
+setInterval(function () {
+    time = --time <= 0 ? 20 : time;
+
+    timeBackwards.textContent = time;
+
+    if (time === 1) {
+        // changing the question when time is up
+        removeIndex++;
+        questionsArray[removeIndex].classList.toggle("hide");
+        time = 20 + 1;
+    }
+
+    if (time === 21) {
+        questionsArray[removeIndex + 1].classList.toggle("hide"); // TODO: IF QUESTIONS ARE FINISHED GO TO THE RESULT PAGE
+    }
+}, 1000);
 
 function nextQuestion() {
     questionNumber++;
 
+    // makes the current question display-none, brings next question, restart the timer and animation
+    time = --time <= 0 ? 20 : time;
+
+    removeIndex++;
+    questionsArray[removeIndex].classList.add("hide");
+    questionsArray[removeIndex + 1].classList.toggle("hide");
+
+    time = 20;
+    timeBackwards.textContent = time;
+
+    let countdownCircleCircle = document.querySelector(
+        ".countdown-circle circle"
+    );
+
+    countdownCircleCircle.getAnimations().forEach((animation) => {
+        animation.cancel();
+        animation.play();
+    });
 }

@@ -38,45 +38,48 @@
 
         <div id="questions-part">
             <h1 class="hide">Welcome to your exam</h1>
-            <div id="questions-timer">
-                <div id="donut"></div>
-                <div id="time">
-                    <p id="seconds">SECONDS</p>
-                    <p id="counter"> 16</p>
-                    <p id="remaining">REMAINING</p>
-                </div>
-            </div>
 
-            <div class="questions-container">
-
-            </div>
-            <div class="questions-count">QUESTION 10 <span>/ 10</span></div>
         </div>
 
-        <div id="result_page_container" class="hide">
-            <div id="result_title" class="hide">
-                <h1>Results</h1>
-                <p>The summary of your answers:</p>
-            </div>
+        <div class="questions-container">
 
-            <div id="result_display_container" class="hide">
-                <div id="correct_answer_container">
-                    <h2>Correct</h2>
-                    <p id="percentage_of_correct_answers"></p>
-                    <p id="number_of_correct_answers"></p>
-                </div>
-                <div id="notification_for_passing"></div>
-                <div id="wrong_answer_container">
-                    <h2>Wrong</h2>
-                    <p id="percentage_of_wrong_answers"></p>
-                    <p id="number_of_wrong_answers"></p>
-                </div>
-            </div>
-
-            <div id="result_footer" class="hide">
-                <input type="button" value="RATE US" id="button_to_rating">
-            </div id="result_footer">
         </div>
+        <div id="timer">
+            <p id="seconds">SECONDS</p>
+            <div id="timer-number"></div><svg class="countdown-circle">
+                <circle r="53" cx="60" cy="60"></circle>
+            </svg><svg class="greyish-circle">
+                <circle r="53" cx="60" cy="60"></circle>
+            </svg>
+            <p>REMAINING</p>
+        </div>
+        <div class="questions-count">QUESTION 10 <span>/ 10</span></div>
+    </div>
+
+    <div id="result_page_container" class="hide">
+        <div id="result_title" class="hide">
+            <h1>Results</h1>
+            <p>The summary of your answers:</p>
+        </div>
+
+        <div id="result_display_container" class="hide">
+            <div id="correct_answer_container">
+                <h2>Correct</h2>
+                <p id="percentage_of_correct_answers"></p>
+                <p id="number_of_correct_answers"></p>
+            </div>
+            <div id="notification_for_passing"></div>
+            <div id="wrong_answer_container">
+                <h2>Wrong</h2>
+                <p id="percentage_of_wrong_answers"></p>
+                <p id="number_of_wrong_answers"></p>
+            </div>
+        </div>
+
+        <div id="result_footer" class="hide">
+            <input type="button" value="RATE US" id="button_to_rating">
+        </div id="result_footer">
+    </div>
     </div>
     </div>
 
@@ -144,6 +147,7 @@
         <a href="https://epicode.com/" target="_blank">
             <div id="more-information-button">MORE INFO</div>
         </a>
+
 
     </div>
 
