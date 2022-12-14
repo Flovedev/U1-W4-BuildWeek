@@ -85,7 +85,7 @@
     padding-top: 25px;
 }
 
-svg {
+.countdown-circle circle {
     position: absolute;
     top: 0;
     right: 0;
