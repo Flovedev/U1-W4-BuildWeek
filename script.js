@@ -169,14 +169,15 @@ let questionsArray = document.getElementsByClassName(
 // TIMER
 
 let timeBackwards = document.getElementById("timer-number");
-let time = 20;
+let time = 5;
 
 timeBackwards.textContent = time;
 
 let removeIndex = -1;
 
-setInterval(function () {
-    time = --time <= 0 ? 20 : time;
+let timerTest = setInterval(function () {
+    time = --time <= 0 ? 5 : time;
+    // time--
 
     timeBackwards.textContent = time;
 
@@ -184,11 +185,12 @@ setInterval(function () {
         // changing the question when time is up
         removeIndex++;
         questionsArray[removeIndex].classList.toggle("hide");
-        time = 20 + 1;
+        time = 5 + 1;
     }
 
-    if (time === 21) {
-        questionsArray[removeIndex + 1].classList.toggle("hide"); // TODO: IF QUESTIONS ARE FINISHED GO TO THE RESULT PAGE
+    if (time === 6) {
+        questionsArray[removeIndex + 1].classList.toggle("hide");
+        clearInterval(timerTest)
     }
 }, 1000);
 
