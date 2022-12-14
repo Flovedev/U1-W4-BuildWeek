@@ -99,6 +99,8 @@ const questions = [
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
 ]
+export let totalScore = 0
+
 
 function selectedAnswer(eventData) {
     let clicledAnswer = eventData.target
@@ -131,6 +133,7 @@ function displayQuestion() {
         if (index !== 0) {
             allNode.classList.add('hide')
         }
+        let correctAnswer = questions[index].correct_answer
         answer.push(element.correct_answer)
         answer.sort(() => 0.5 - Math.random())
 
@@ -140,10 +143,15 @@ function displayQuestion() {
 
             answerNode.innerText = answer[i];
             answerNode.classList.add('answers');
-            answerNode.addEventListener('click', nextQuestion);
+            // answerNode.addEventListener('click', nextQuestion);
             answerContainerNode.appendChild(answerNode);
+            answerNode.addEventListener('click', (event) => {
+                if (event.target.innerText === correctAnswer) {
+                    totalScore += 1
+                }
+                nextQuestion()
+            });
         }
-
         allNode.appendChild(questionsNode)
         allNode.appendChild(answerContainerNode)
         wrapNode.appendChild(allNode)
@@ -160,6 +168,7 @@ function displayQuestion() {
 
 
 }
+
 displayQuestion()
 
 let questionsArray = document.getElementsByClassName(
@@ -215,4 +224,5 @@ function nextQuestion() {
         animation.cancel();
         animation.play();
     });
+
 }

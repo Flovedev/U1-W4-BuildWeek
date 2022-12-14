@@ -1,4 +1,4 @@
-let totalScore = 3;
+let testTotalScore = 3;
 let totalQuestions = 10;
 
 function showResults() {
@@ -8,15 +8,15 @@ function showResults() {
     let numberOfWrongAnswers = totalQuestions - totalScore;
 
     //calculating percentage
-    let percentageOfCorrectAnswers = numberOfCorrectAnswers/totalQuestions * 100;
-    let percentageOfWrongAnswers = numberOfWrongAnswers/totalQuestions * 100;
+    let percentageOfCorrectAnswers = numberOfCorrectAnswers / totalQuestions * 100;
+    let percentageOfWrongAnswers = numberOfWrongAnswers / totalQuestions * 100;
 
     //document.querySelector("avg").setAttribute("stroke-dasharray", circleDasharray)
 
     //adding inner text
     document.getElementById("percentage_of_correct_answers").innerText = `${percentageOfCorrectAnswers}%`
     document.getElementById("number_of_correct_answers").innerText = `${numberOfCorrectAnswers}/${totalQuestions} questions`;
-    
+
     document.getElementById("percentage_of_wrong_answers").innerText = `${percentageOfWrongAnswers}%`
     document.getElementById("number_of_wrong_answers").innerText = `${numberOfWrongAnswers}/${totalQuestions} questions`;
 
@@ -52,7 +52,7 @@ showResults();
 
 
 let buttonToRatingNode = document.getElementById('button_to_rating');
-buttonToRatingNode.addEventListener('click', () =>{
+buttonToRatingNode.addEventListener('click', () => {
     console.log("works");
     document.getElementById('result_page_container').style.display = "none";
     document.getElementById('feedback-page_content-container').style.display = "inline";
