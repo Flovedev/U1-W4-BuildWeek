@@ -19,8 +19,8 @@
 <body>
     <div id="main-container">
         <div id="logo"><img src="assets/epicode_logo.png" alt="epiLogo"></div>
-        
-        <div id="welcomePage">
+
+        <div id="welcomePage" style="display:none;">
             <h1>Welcome to <span id="title">your exam</span></h1>
             <h3>Instructions</h3>
             <p>We dont expect most engineers to know the answers to all of these questions, so don't worry if you're
@@ -36,57 +36,53 @@
             <input type="button" value="Proceed" id="proceedBtn">
 
         </div>
-       
-        <div id="questions-part" style="display:none;">
-          <h1 class="hide">Welcome to your exam</h1>
+
+        <div id="questions-part">
+            <h1 class="hide">Welcome to your exam</h1>
             <div id="questions-timer">
                 <div id="donut"></div>
-                <div id="time">
-                    <p id="seconds">SECONDS</p>
-                    <p id="counter"> 16</p>
-                    <p id="remaining">REMAINING</p>
+
+            </div>
+
+            <div class="questions-container">
+
+            </div>
+            <div id="timer">
+                <p id="seconds">SECONDS</p>
+                <div id="timer-number"></div><svg class="countdown-circle">
+                    <circle r="53" cx="60" cy="60"></circle>
+                </svg><svg class="greyish-circle">
+                    <circle r="53" cx="60" cy="60"></circle>
+                </svg>
+                <p>REMAINING</p>
+            </div>
+            <div class="questions-count">QUESTION 10 <span>/ 10</span></div>
+        </div>
+
+        <div id="result_page_container" class="hide">
+            <div id="result_title" class="hide">
+                <h1>Results</h1>
+                <p>The summary of your answers:</p>
+            </div>
+
+            <div id="result_display_container" class="hide">
+                <div id="correct_answer_container">
+                    <h2>Correct</h2>
+                    <p id="percentage_of_correct_answers"></p>
+                    <p id="number_of_correct_answers"></p>
+                </div>
+                <div id="notification_for_passing"></div>
+                <div id="wrong_answer_container">
+                    <h2>Wrong</h2>
+                    <p id="percentage_of_wrong_answers"></p>
+                    <p id="number_of_wrong_answers"></p>
                 </div>
             </div>
 
-        <div class="questions-container">
-
+            <div id="result_footer" class="hide">
+                <input type="button" value="RATE US" id="button_to_rating">
+            </div id="result_footer">
         </div>
-        <div id="timer">
-            <p id="seconds">SECONDS</p>
-            <div id="timer-number"></div><svg class="countdown-circle">
-                <circle r="53" cx="60" cy="60"></circle>
-            </svg><svg class="greyish-circle">
-                <circle r="53" cx="60" cy="60"></circle>
-            </svg>
-            <p>REMAINING</p>
-        </div>
-        <div class="questions-count">QUESTION 10 <span>/ 10</span></div>
-    </div>
-
-    <div id="result_page_container" class="hide">
-        <div id="result_title" class="hide">
-            <h1>Results</h1>
-            <p>The summary of your answers:</p>
-        </div>
-
-        <div id="result_display_container" class="hide">
-            <div id="correct_answer_container">
-                <h2>Correct</h2>
-                <p id="percentage_of_correct_answers"></p>
-                <p id="number_of_correct_answers"></p>
-            </div>
-            <div id="notification_for_passing"></div>
-            <div id="wrong_answer_container">
-                <h2>Wrong</h2>
-                <p id="percentage_of_wrong_answers"></p>
-                <p id="number_of_wrong_answers"></p>
-            </div>
-        </div>
-
-        <div id="result_footer" class="hide">
-            <input type="button" value="RATE US" id="button_to_rating">
-        </div id="result_footer">
-    </div>
     </div>
     </div>
 
@@ -139,10 +135,10 @@
 
     </div> <!-- MAIN CONTAINER CLOSING TAG -->
 
-        <script src="./script.js"></script>
-        <script src="welcome.js"></script>
-        <script src="result-index.js"></script>
-        <script src="./feedback-page-script.js"></script>
+    <script src="./script.js"></script>
+    <script src="welcome.js"></script>
+    <script src="result-index.js"></script>
+    <script src="./feedback-page-script.js"></script>
     </div>
 </body>
 
