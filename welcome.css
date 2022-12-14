@@ -4,32 +4,34 @@
     width: 100vw;
     line-height: 5vh;
     margin-top: 10vh;
+    font-size: 2vh;
 }
-
 h3{
     font-family: Outfit, sans-serif;
     font-size: 27px;
     color: #D20094;
     font-weight:bolder;
+    font-size: larger;
 }
 p{
     font-family: Inter, sans-serif;
     max-width: 60%;
-    font-size: 16px;
+    font-size: larger;
 }
 ul{
     font-family: Inter, sans-serif;
     font-size: 15.5px;
     margin: 40px 0;
+    font-size: larger;
 }
 input[type=button]{
     background: #00ffff;
-    padding: 20px 45px;
+    padding: 2vh 9vh;
     color: #000000;
     display: inline-block;
     font: normal bold 26px/1 "Roboto", sans-serif;
     text-align: center;
-    margin-left: 73vh;
+    margin-left: 74vh;
     border-color:transparent;
 
 }
@@ -46,7 +48,8 @@ input[type="checkbox"] + *::before {
     border-style: solid;
     border-width: 0.3vh;
     border-color: white;
-    margin-bottom: 2.2vh;
+    margin-bottom: 2.5vh;
+    margin-right: 2vh;
   }
   input[type="checkbox"]:checked + *::before {
     color: white;
