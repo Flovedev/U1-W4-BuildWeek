@@ -112,17 +112,21 @@ function selectedAnswer(eventData) {
 
 let questionNumber = 1
 function displayQuestion() {
-    let allNode = document.querySelector('#questions-part')
-    let counterNode = document.querySelector('.questions-count')
-    let wrapNode = document.querySelector('.questions-container');
-    let questionsNode = document.createElement('div')
-    let answerContainerNode = document.createElement('div')
 
-    questionsNode.classList.add('questions')
+    let wrapNode = document.querySelector('.questions-container');
+    let counterNode = document.querySelector('.questions-count')
+
+
+
     for (let index = 0; index < questions.length; index++) {
         const element = questions[index];
-
+        let questionsNode = document.createElement('div')
+        questionsNode.classList.add('questions')
+        questionsNode.innerText = element.question
+        let answerContainerNode = document.createElement('div')
         let answer = element.incorrect_answers;
+        let allNode = document.createElement('div')
+        allNode.classList.add('question-answer-container')
         answer.push(element.correct_answer)
         answer.sort(() => 0.5 - Math.random())
 
@@ -133,38 +137,24 @@ function displayQuestion() {
             answerNode.innerText = answer[i];
             answerNode.classList.add('answers');
             answerContainerNode.appendChild(answerNode);
-            answerContainerNode.setAttribute('id', index + 1)
-            console.log(answerContainerNode.getAttribute('id'))
+
 
         }
-        if (answerContainerNode.getAttribute('id') !== questionNumber) {
-            answerContainerNode.classList.add('hide');
-            wrapNode.appendChild(questionsNode)
-            wrapNode.appendChild(answerContainerNode)
-        } else {
-            wrapNode.appendChild(questionsNode)
-            wrapNode.appendChild(answerContainerNode)
-        }
+
+        allNode.appendChild(questionsNode)
+        allNode.appendChild(answerContainerNode)
+        wrapNode.appendChild(allNode)
+
 
 
         counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
-        // wrapNode.classList.add(`P${index}`)
 
-        allNode.appendChild(wrapNode.cloneNode(true))
-        allNode.appendChild(counterNode.cloneNode(true))
     }
 
     let containerCount = document.getElementsByClassName('questions-container')
     let containerNum = document.getElementsByClassName('questions-count')
 
-    for (let index = 1; index < containerCount.length; index++) {
-        const element = containerCount[index];
-        element.classList.add('hide')
-    }
-    for (let index = 1; index < containerNum.length; index++) {
-        const element = containerNum[index];
-        element.classList.add('hide')
-    }
+
 }
 displayQuestion()
 
