@@ -175,7 +175,7 @@ timeBackwards.textContent = time;
 
 let removeIndex = -1;
 
-let timerTest = setInterval(function () {
+setInterval(function () {
     time = --time <= 0 ? 5 : time;
     // time--
 
@@ -190,7 +190,7 @@ let timerTest = setInterval(function () {
 
     if (time === 6) {
         questionsArray[removeIndex + 1].classList.toggle("hide");
-        clearInterval(timerTest)
+
     }
 }, 1000);
 
