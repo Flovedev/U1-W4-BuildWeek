@@ -79,7 +79,25 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 1em;
+    width: 18em;
+    height: 18em;
+    border: 3.75em solid #00FFFF;
+    border-right: 3.5em solid (#C2148D 0deg 90deg);
+    /* background: conic-gradient(
+        #C2148D 0deg 90deg,
+        #00FFFF 90deg 360deg
+    ); */
+    border-radius: 100%;
 }
+
+/* #notification_for_passing::after {
+    position: flex;
+    width: 15em;
+    height: 15em;
+    background: none;
+    border-radius: 50%;
+    
+} */
 
 .congratulations_or_condolences {
     margin: 0;
@@ -100,7 +118,7 @@
 }
 
 
-#result_donut {
+/* #result_donut {
     display: flex;
 
     position: absolute;
@@ -113,7 +131,7 @@ svg circle {
     stroke-width: 8px;
     stroke: white;
     fill: none;
-}
+} */
 
 
 /* footer */
