@@ -18,7 +18,9 @@
     font-weight: bolder;
 }
 
-.question-answer-container {
+.question-quetions-part {
+    display: none;
+
     position: absolute;
     height: 400px;
     /* background-image: url('./assets/bg.jpg'); */
