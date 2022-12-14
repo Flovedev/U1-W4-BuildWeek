@@ -3,7 +3,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     text-align: center;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 #result_page_container{
