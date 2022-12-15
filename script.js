@@ -131,13 +131,18 @@ function displayQuestion() {
     for (let i = 0; i < answer.length; i++) {
       let answerNode = document.createElement("div");
 
-      answerNode.innerText = answer[i];
-      answerNode.classList.add("answers");
-      // answerNode.addEventListener('click', nextQuestion);
-      answerContainerNode.appendChild(answerNode);
-      answerNode.addEventListener("click", (event) => {
-        if (event.target.innerText === correctAnswer) {
-          totalScore += 1;
+            answerNode.innerText = answer[i];
+            answerNode.classList.add('answers');
+            // answerNode.addEventListener('click', nextQuestion);
+            answerContainerNode.appendChild(answerNode);
+            answerNode.addEventListener('click', (event) => {
+                if (event.target.innerText === correctAnswer) {
+                    totalScore++
+
+                }
+                nextQuestion()
+            });
+            answerNode.addEventListener('change', nextQuestion);
         }
         nextQuestion();
       });
@@ -147,11 +152,12 @@ function displayQuestion() {
     allNode.appendChild(answerContainerNode);
     wrapNode.appendChild(allNode);
 
-    counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`;
-  }
 
-  // let containerCount = document.getElementsByClassName('questions-container')
-  // let containerNum = document.getElementsByClassName('questions-count')
+        counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
+
+
+    }
+
 }
 
 displayQuestion(); //add event listener
@@ -175,20 +181,17 @@ var timer = setInterval(function () {
     timerNumber.textContent = time;
   }
 
-  if (time === -1) {
-    // changing the question when time is up
-    removeIndex++;
-    questionsArray[removeIndex].classList.toggle("hide");
+    if (time === 1) {
+        // changing the question when time is up
+        time = 20 + 1;
+        nextQuestion()
+    }
 
     time = 20;
     timerNumber.textContent = time;
 
     nextQuestion();
   }
-
-  // if (time === 20) {
-  //   questionsArray[removeIndex + 1].classList.toggle("hide");
-  // }
 
   if (removeIndex + 1 === questionsArray.length) {
     document.getElementById("questions-part").style.display = "none";
@@ -197,34 +200,44 @@ var timer = setInterval(function () {
 }, 1000);
 
 function nextQuestion() {
-  if (questions.length > questionNumber) {
-    questionNumber++;
-    document.querySelector(
-      ".questions-count"
-    ).innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`;
-    console.log(questionNumber);
 
-    // makes the current question display-none, brings next question, restart the timer and animation
-    time = 20;
 
-    removeIndex++;
-    questionsArray[removeIndex].classList.add("hide");
-    questionsArray[removeIndex + 1].classList.toggle("hide");
+    if (questions.length > questionNumber) {
 
-    time = 20;
-    timerNumber.textContent = time;
+        questionNumber++;
+        document.querySelector('.questions-count').innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
 
-    let countdownCircleCircle = document.querySelector(
-      ".countdown-circle circle"
-    );
+        // makes the current question display-none, brings next question, restart the timer and animation
+        time = --time <= 0 ? 20 : time;
 
-    countdownCircleCircle.getAnimations().forEach((animation) => {
-      animation.cancel();
-      animation.play();
-    });
-  } else {
-    document.getElementById("questions-part").style.display = "none";
-    document.getElementById("result_page_container").style.display = "flex";
-  }
+        removeIndex++;
+        questionsArray[removeIndex].classList.add("hide");
+        questionsArray[removeIndex + 1].classList.toggle("hide");
+
+        time = 20;
+        timeBackwards.textContent = time;
+
+        let countdownCircleCircle = document.querySelector(
+            ".countdown-circle circle"
+        );
+
+        countdownCircleCircle.getAnimations().forEach((animation) => {
+            animation.cancel();
+            animation.play();
+        });
+        if (questionNumber === questions.length) {
+            let finalScore = totalScore
+            window.localStorage.setItem('newScore', finalScore)
+            showResults(localStorage.getItem('newScore'));
+        }
+
+    } else {
+        document.getElementById("questions-part").style.display = "none";
+        document.getElementById("result_page_container").style.display = "flex";
+    }
+
+
 }
-console.log(totalScore);
+
+
+
