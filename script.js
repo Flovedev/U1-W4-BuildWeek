@@ -101,7 +101,7 @@ let questionNumber = 1;
 function displayQuestion() {
   let wrapNode = document.querySelector(".questions-container");
   let counterNode = document.querySelector(".questions-count");
-
+  
   for (let index = 0; index < questions.length; index++) {
     const element = questions[index];
     let questionsNode = document.createElement("div");
@@ -117,10 +117,10 @@ function displayQuestion() {
     let correctAnswer = questions[index].correct_answer;
     answer.push(element.correct_answer);
     answer.sort(() => 0.5 - Math.random());
-
+    
     for (let i = 0; i < answer.length; i++) {
       let answerNode = document.createElement("div");
-
+      
       answerNode.innerText = answer[i];
       answerNode.classList.add("answers");
       // answerNode.addEventListener('click', nextQuestion);
@@ -153,30 +153,7 @@ let removeIndex = -1;
 let time = 20;
 timerNumber.textContent = time;
 
-var timer = setInterval(function () {
-  // time = --time <= 0 ? 20 : time;
-  if (time > -1) {
-    time--;
-    timerNumber.textContent = time;
-  }
 
-  if (time === 0) {
-    // changing the question when time is up
-    time = 20;
-    nextQuestion();
-  }
-
-  // time = 20;
-  // timerNumber.textContent = time;
-
-  // nextQuestion();
-
-  if (removeIndex + 1 === questionsArray.length) {
-    document.getElementById("questions-part").style.display = "none";
-    document.getElementById("result_page_container").style.display = "flex";
-    clearInterval(timer);
-  }
-}, 1000);
 
 function nextQuestion() {
   if (questions.length > questionNumber) {
