@@ -53,7 +53,8 @@
 }
 
 #feedback-page_content-container h1 {
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 48px;
     letter-spacing: 1px;
@@ -99,6 +100,8 @@
     border-bottom: 2px solid #c33a8e;
     font-size: 18px;
     color: #c33a8e;
+    display: block;
+    margin-inline: auto;
 }
 
 #more-information-button {
@@ -151,5 +154,8 @@
 }
 
 #feedback-page_content-container a {
+    margin-left: 44%;
+    display: inline-block;
     text-decoration: none;
+    width: 220px;
 }
