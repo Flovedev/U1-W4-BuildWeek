@@ -147,7 +147,8 @@ function displayQuestion() {
             answerContainerNode.appendChild(answerNode);
             answerNode.addEventListener('click', (event) => {
                 if (event.target.innerText === correctAnswer) {
-                    totalScore += 1
+                    totalScore++
+
                 }
                 nextQuestion()
             });
@@ -162,11 +163,6 @@ function displayQuestion() {
 
 
     }
-
-    // let containerCount = document.getElementsByClassName('questions-container')
-    // let containerNum = document.getElementsByClassName('questions-count')
-
-
 
 }
 
@@ -192,25 +188,19 @@ setInterval(function () {
     timeBackwards.textContent = time;
 
     if (time === 1) {
-        // changing the question when time is up
-
-
-        // questionsArray[removeIndex].classList.toggle("hide");
-
         time = 5 + 1;
         nextQuestion();
     }
 
-    // if (time === 21) {
-    //     questionsArray[removeIndex + 1].classList.toggle("hide");
-
-    // }
 
     if (removeIndex + 1 === questionsArray.length) {
         document.getElementById("questions-part").style.display = "none";
         document.getElementById("result_page_container").style.display = "flex";
     }
 
+    // if (questionNumber === questions.length) {
+    //     clearInterval()
+    // }
 }, 1000);
 
 function nextQuestion() {
@@ -220,7 +210,7 @@ function nextQuestion() {
 
         questionNumber++;
         document.querySelector('.questions-count').innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
-        console.log(questionNumber);
+
         // makes the current question display-none, brings next question, restart the timer and animation
         time = --time <= 0 ? 20 : time;
 
@@ -239,11 +229,19 @@ function nextQuestion() {
             animation.cancel();
             animation.play();
         });
+        if (questionNumber === questions.length) {
+            let finalScore = totalScore
+            window.localStorage.setItem('newScore', finalScore)
+            showResults(localStorage.getItem('newScore'));
+        }
 
     } else {
         document.getElementById("questions-part").style.display = "none";
         document.getElementById("result_page_container").style.display = "flex";
     }
 
+
 }
-console.log(questionNumber);
+
+
+

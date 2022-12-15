@@ -1,12 +1,13 @@
 
 
+// let correctAnswers = window.localStorage.getItem('newScore')
 let totalQuestions = 10;
 
-function showResults() {
+function showResults(result) {
 
     //creating the var for the inner text 
-    let numberOfCorrectAnswers = totalScore;
-    let numberOfWrongAnswers = totalQuestions - totalScore;
+    let numberOfCorrectAnswers = result;
+    let numberOfWrongAnswers = totalQuestions - result;
 
     //calculating percentage
     let percentageOfCorrectAnswers = numberOfCorrectAnswers / totalQuestions * 100;
@@ -47,9 +48,10 @@ function showResults() {
     document.getElementById("notification_for_passing").appendChild(messageOfSuccessOrFail);
     document.getElementById("notification_for_passing").appendChild(messageWhatHappensNext);
 
+
 }
 
-showResults();
+// showResults();
 
 
 let buttonToRatingNode = document.getElementById('button_to_rating');
