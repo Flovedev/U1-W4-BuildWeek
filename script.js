@@ -101,7 +101,7 @@ let questionNumber = 1;
 function displayQuestion() {
   let wrapNode = document.querySelector(".questions-container");
   let counterNode = document.querySelector(".questions-count");
-  
+
   for (let index = 0; index < questions.length; index++) {
     const element = questions[index];
     let questionsNode = document.createElement("div");
@@ -117,10 +117,10 @@ function displayQuestion() {
     let correctAnswer = questions[index].correct_answer;
     answer.push(element.correct_answer);
     answer.sort(() => 0.5 - Math.random());
-    
+
     for (let i = 0; i < answer.length; i++) {
       let answerNode = document.createElement("div");
-      
+
       answerNode.innerText = answer[i];
       answerNode.classList.add("answers");
       // answerNode.addEventListener('click', nextQuestion);
@@ -150,27 +150,25 @@ let questionsArray = document.getElementsByClassName(
 let timerNumber = document.getElementById("timer-number");
 let removeIndex = -1;
 
+localStorage.getItem("startTime");
 time = 20;
 timerNumber.textContent = time;
 
-
-
 function nextQuestion() {
   if (questions.length > questionNumber) {
+    time = 20;
+    timerNumber.textContent = time;
+
     questionNumber++;
     document.querySelector(
       ".questions-count"
     ).innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`;
 
     // makes the current question display-none, brings next question, restart the timer and animation
-    time = --time <= 0 ? 20 : time;
 
     removeIndex++;
     questionsArray[removeIndex].classList.add("hide");
     questionsArray[removeIndex + 1].classList.toggle("hide");
-
-    time = 20;
-    timerNumber.textContent = time;
 
     let countdownCircleCircle = document.querySelector(
       ".countdown-circle circle"
@@ -188,5 +186,6 @@ function nextQuestion() {
   } else {
     document.getElementById("questions-part").style.display = "none";
     document.getElementById("result_page_container").style.display = "flex";
+    timer = null;
   }
 }

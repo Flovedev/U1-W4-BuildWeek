@@ -1,18 +1,26 @@
-let btn = document.getElementById('proceedBtn');
-btn.addEventListener('click', () => {
-  const checked = document.querySelector('#proceed:checked') !== null;
+let time = 20;
+
+let btn = document.getElementById("proceedBtn");
+btn.addEventListener("click", () => {
+  const checked = document.querySelector("#proceed:checked") !== null;
   if (checked) {
-    document.getElementById('welcomePage').style.display = "none";
-    document.getElementById('questions-part').style.display = "block";
-    document.getElementById('result_page_container').style.display = "none";
-    let time = 20;
+    document.getElementById("welcomePage").style.display = "none";
+    document.getElementById("questions-part").style.display = "block";
+    document.getElementById("result_page_container").style.display = "none";
+
+    time = 20;
+
     window.displayQuestion();
+
+    localStorage.setItem("startTime", timer);
 
     var timer = setInterval(function () {
       if (time > -1) {
-        console.log(time)
+        console.log(time);
         // time = time <= 0 ? 20 : time;
         time--;
+
+        let timerNumber = document.getElementById("timer-number");
         timerNumber.textContent = time;
       }
 
@@ -22,16 +30,10 @@ btn.addEventListener('click', () => {
         nextQuestion();
       }
 
-      // time = 20;
-      // timerNumber.textContent = time;
-
-      // nextQuestion();
-
       if (removeIndex === questionsArray.length) {
         document.getElementById("questions-part").style.display = "none";
         document.getElementById("result_page_container").style.display = "flex";
-        clearInterval(timer);
       }
     }, 1000);
   }
-})
+});
