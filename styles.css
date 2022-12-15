@@ -121,7 +121,7 @@
     stroke-width: 12px;
     stroke: #00FFFF;
     fill: none;
-    animation: countdown 20.8s linear infinite forwards;
+    animation: countdown 21s linear infinite forwards;
 }
 
 .greyish-circle {

@@ -5,7 +5,7 @@ btn.addEventListener('click', () =>{
             document.getElementById('welcomePage').style.display = "none";
             document.getElementById('questions-part').style.display = "block";
             document.getElementById('result_page_container').style.display = "none";
-           //time = 20;
+            let time = 20;
             window.displayQuestion();
 
             var timer = setInterval(function () {
