@@ -150,7 +150,7 @@ let questionsArray = document.getElementsByClassName(
 let timerNumber = document.getElementById("timer-number");
 let removeIndex = -1;
 
-let time = 20;
+time = 20;
 timerNumber.textContent = time;
 
 
