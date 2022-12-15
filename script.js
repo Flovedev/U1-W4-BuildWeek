@@ -99,7 +99,7 @@ const questions = [
         incorrect_answers: ["Python", "C", "Jakarta"],
     },
 ]
- let totalScore = 0
+let totalScore = 0
 
 
 // function selectedAnswer(eventData) {
@@ -160,14 +160,14 @@ function displayQuestion() {
 
         counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
 
-        
+
     }
-    
+
     // let containerCount = document.getElementsByClassName('questions-container')
     // let containerNum = document.getElementsByClassName('questions-count')
-    
-    
-    
+
+
+
 }
 
 displayQuestion() //add event listener 
@@ -179,69 +179,71 @@ let questionsArray = document.getElementsByClassName(
 // TIMER
 
 let timeBackwards = document.getElementById("timer-number");
-let time = 20;
+let time = 5;
 
 timeBackwards.textContent = time;
 
 let removeIndex = -1;
 
 setInterval(function () {
-    time = --time <= 0 ? 20 : time;
+    time = --time <= 0 ? 5 : time;
     // time--
 
     timeBackwards.textContent = time;
 
     if (time === 1) {
         // changing the question when time is up
-        removeIndex++;
-        questionsArray[removeIndex].classList.toggle("hide");
-        time = 20 + 1;
-        nextQuestion()
+
+
+        // questionsArray[removeIndex].classList.toggle("hide");
+
+        time = 5 + 1;
+        nextQuestion();
     }
 
-    if (time === 21) {
-        questionsArray[removeIndex + 1].classList.toggle("hide");
-        
-    }
+    // if (time === 21) {
+    //     questionsArray[removeIndex + 1].classList.toggle("hide");
+
+    // }
 
     if (removeIndex + 1 === questionsArray.length) {
         document.getElementById("questions-part").style.display = "none";
         document.getElementById("result_page_container").style.display = "flex";
-      } 
-    
+    }
+
 }, 1000);
 
 function nextQuestion() {
 
-    
+
     if (questions.length > questionNumber) {
-        
+
         questionNumber++;
         document.querySelector('.questions-count').innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
-            console.log(questionNumber);
-            // makes the current question display-none, brings next question, restart the timer and animation
-            time = --time <= 0 ? 20 : time;
-            
-            removeIndex++;
-            questionsArray[removeIndex].classList.add("hide");
-            questionsArray[removeIndex + 1].classList.toggle("hide");
-            
-            time = 20;
-            timeBackwards.textContent = time;
-            
-            let countdownCircleCircle = document.querySelector(
-                ".countdown-circle circle"
-                );
-                
-                countdownCircleCircle.getAnimations().forEach((animation) => {
-                    animation.cancel();
-                    animation.play();
-                });
-                
-            } else {
-                document.getElementById("questions-part").style.display = "none";
-                document.getElementById("result_page_container").style.display = "flex";
-            }
-        
+        console.log(questionNumber);
+        // makes the current question display-none, brings next question, restart the timer and animation
+        time = --time <= 0 ? 20 : time;
+
+        removeIndex++;
+        questionsArray[removeIndex].classList.add("hide");
+        questionsArray[removeIndex + 1].classList.toggle("hide");
+
+        time = 20;
+        timeBackwards.textContent = time;
+
+        let countdownCircleCircle = document.querySelector(
+            ".countdown-circle circle"
+        );
+
+        countdownCircleCircle.getAnimations().forEach((animation) => {
+            animation.cancel();
+            animation.play();
+        });
+
+    } else {
+        document.getElementById("questions-part").style.display = "none";
+        document.getElementById("result_page_container").style.display = "flex";
+    }
+
 }
-console.log(totalScore);
+console.log(questionNumber);

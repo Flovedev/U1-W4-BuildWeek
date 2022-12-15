@@ -1,5 +1,5 @@
 
-console.log(totalScore);
+
 let totalQuestions = 10;
 
 function showResults() {
