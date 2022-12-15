@@ -4,5 +4,6 @@ btn.addEventListener('click', () =>{
         if(checked){
             document.getElementById('welcomePage').style.display = "none";
             document.getElementById('questions-part').style.display = "inline-block";
+            displayQuestion();
         }
 })

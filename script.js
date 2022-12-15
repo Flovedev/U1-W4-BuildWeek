@@ -141,8 +141,6 @@ function displayQuestion() {
   }
 }
 
-displayQuestion(); //add event listener
-
 let questionsArray = document.getElementsByClassName(
   "question-answer-container"
 );
