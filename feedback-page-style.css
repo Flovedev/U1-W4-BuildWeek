@@ -52,7 +52,7 @@
     margin-top: 25px;
     padding-bottom: 8px;
     padding-left: 25px;
-    width: 65%;
+    width: 37%;
     background: none;
     border: none;
     outline: none;
@@ -61,19 +61,6 @@
     color: #c33a8e;
     display: block;
     margin-inline: auto;
-}
-
-#comment-input {
-    margin-top: 25px;
-    padding-bottom: 8px;
-    padding-left: 25px;
-    width: 65%;
-    background: none;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #c33a8e;
-    font-size: 18px;
-    color: #c33a8e;
 }
 
 #more-information-button {
