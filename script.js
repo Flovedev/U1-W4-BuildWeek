@@ -219,7 +219,7 @@ function nextQuestion() {
         
         questionNumber++;
         document.querySelector('.questions-count').innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`
-            console.log(questionNumber);
+            
             // makes the current question display-none, brings next question, restart the timer and animation
             time = --time <= 0 ? 20 : time;
             
@@ -252,6 +252,8 @@ console.log(totalScore);
 
 
 // Result page JavaScript
+
+
 
 
 
@@ -301,10 +303,10 @@ function showResults() {
     document.getElementById("notification_for_passing").appendChild(congratulationsOrCondolences);
     document.getElementById("notification_for_passing").appendChild(messageOfSuccessOrFail);
     document.getElementById("notification_for_passing").appendChild(messageWhatHappensNext);
-
+    console.log(totalScore);
 }
 
-showResults();
+
 
 
 let buttonToRatingNode = document.getElementById('button_to_rating');
