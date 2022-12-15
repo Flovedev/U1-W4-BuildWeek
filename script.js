@@ -162,42 +162,33 @@ let questionsArray = document.getElementsByClassName(
 
 // TIMER
 
-let timeBackwards = document.getElementById("timer-number");
-
+let timerNumber = document.getElementById("timer-number");
 let removeIndex = -1;
 
-// let counter = 4;
-// setInterval(() => {
-//   if (counter < 0) {
-//     //this.takeTableDataCallInterval();
-//     counter = 4;
-//     startTimer();
-//   } else {
-//     timeBackwards.innerText = counter;
-//     counter--;
-//   }
-// }, 1000);
-
 let time = 20;
-timeBackwards.textContent = time;
+timerNumber.textContent = time;
 
-setInterval(function () {
-  time = --time <= 0 ? 20 : time;
-  //time--;
+var timer = setInterval(function () {
+  // time = --time <= 0 ? 20 : time;
+  if (time > -1) {
+    time--;
+    timerNumber.textContent = time;
+  }
 
-  timeBackwards.textContent = time;
-
-  if (time === 1) {
+  if (time === -1) {
     // changing the question when time is up
     removeIndex++;
     questionsArray[removeIndex].classList.toggle("hide");
-    time = 20 + 1;
+
+    time = 20;
+    timerNumber.textContent = time;
+
     nextQuestion();
   }
 
-  if (time === 21) {
-    questionsArray[removeIndex + 1].classList.toggle("hide");
-  }
+  // if (time === 20) {
+  //   questionsArray[removeIndex + 1].classList.toggle("hide");
+  // }
 
   if (removeIndex + 1 === questionsArray.length) {
     document.getElementById("questions-part").style.display = "none";
@@ -212,15 +203,16 @@ function nextQuestion() {
       ".questions-count"
     ).innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`;
     console.log(questionNumber);
+
     // makes the current question display-none, brings next question, restart the timer and animation
-    time = --time <= 0 ? 20 : time;
+    time = 20;
 
     removeIndex++;
     questionsArray[removeIndex].classList.add("hide");
     questionsArray[removeIndex + 1].classList.toggle("hide");
 
     time = 20;
-    timeBackwards.textContent = time;
+    timerNumber.textContent = time;
 
     let countdownCircleCircle = document.querySelector(
       ".countdown-circle circle"
