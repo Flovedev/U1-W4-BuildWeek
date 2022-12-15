@@ -40,11 +40,11 @@
     }
 
     #welcomePage {
-        display: none;
+        display: block;
     }
 
     #questions-part {
-        display: inline;
+        display: none;
     }
 
     #result_page_container {
