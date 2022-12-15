@@ -5,11 +5,11 @@ for (let i = 0; i < starsNode.length; i++) {
   let star = starsNode[i]; // each star selected using for loop
   star.addEventListener("click", function () {
     let numberOfStars = i + 1; // Storing the number of stars that user gave by printing out.
-    // star.classList.add("selectedStars"); // TODO: prevent commenting without voting with a star
+    star.classList.add("selectedStars");
     console.log(`User gave us ${numberOfStars} stars out of 10.`); // (Since 'i' is the index number it starts from 0. That's why I added 1 to i to get the actual number of stars.)
   });
 
-  star.addEventListener("mouseover", function () {
+  function starsOnMouseOver() {
     star.classList.add("stars-on-hover-and-click");
     for (let j = 0; j <= i; j++) {
       starsNode[j].classList.add("stars-on-hover");
@@ -18,7 +18,9 @@ for (let i = 0; i < starsNode.length; i++) {
     for (let k = starsNode.length - 1; k > i; k--) {
       starsNode[k].classList.remove("stars-on-hover");
     }
-  });
+  }
+
+  star.addEventListener("mouseover", starsOnMouseOver);
 }
 
 function sendComment(eventData) {
