@@ -3,8 +3,9 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     text-align: center;
-    /* display: none; */
+    display: none;
     flex-direction: column;
+    display: none;
 }
 #result_page_container{
     height: 100vh;

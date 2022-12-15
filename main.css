@@ -39,18 +39,3 @@
         text-shadow: 2.5px 0 #ffffff;
     }
 
-    #welcomePage {
-        display: none;
-    }
-
-    /* #questions-part {
-        display: flex;
-    } */
-
-    #result_page_container {
-        display: none;
-    }
-
-    #feedback-page_content-container {
-        display: none;
-    }

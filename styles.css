@@ -1,3 +1,7 @@
+#questions-part {
+    display: none;
+}
+
 .questions-container {
     display:flex;
     justify-content: center;
