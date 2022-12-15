@@ -5,7 +5,6 @@
     text-align: center;
     display: none;
     flex-direction: column;
-    display: none;
 }
 #result_page_container{
     height: 100vh;
@@ -83,13 +82,33 @@
     margin-bottom: 1em;
     width: 18em;
     height: 18em;
-    border: 3.75em solid #00FFFF;
-    border-right: 3.5em solid (#C2148D 0deg 90deg);
-    /* background: conic-gradient(
-        #C2148D 0deg 90deg,
-        #00FFFF 90deg 360deg
-    ); */
+    border: 3.75em solid #C2148D;
+    z-index: 0;
     border-radius: 100%;
+}
+
+/* DONUTS */
+
+#result-donut-container {
+    margin-bottom: 1em;
+    display: flex;
+    position: absolute;
+    width: 408px;
+    height: 408px;
+    transform: rotate(270deg);
+}
+
+#result-donut-container svg {
+    z-index: 1;
+    width: 408px;
+    height: 408px;
+}
+
+
+#correct-answer-donut {
+    fill: none;
+    stroke-dasharray: 1100px;
+    stroke-width: 3.78em;
 }
 
 
