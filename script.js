@@ -186,6 +186,5 @@ function nextQuestion() {
   } else {
     document.getElementById("questions-part").style.display = "none";
     document.getElementById("result_page_container").style.display = "flex";
-    timer = null;
   }
 }

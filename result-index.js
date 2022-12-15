@@ -109,4 +109,5 @@ buttonToRatingNode.addEventListener("click", () => {
   document.getElementById("result_page_container").style.display = "none";
   document.getElementById("feedback-page_content-container").style.display =
     "inline";
+  time = -5;
 });
