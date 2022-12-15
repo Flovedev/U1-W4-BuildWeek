@@ -1,48 +1,6 @@
 /*-------------------------------FEEDBACK PAGE SPECIFIC STYLE CODES-----------------------------------------*/
 
-#feedback-page_content-container {
-    margin-top: 60px;
-    text-align: center;
-    color: #e7e7ec;
-    font-family: 'Outfit', sans-serif;
-    display: none;
-}
-
-#feedback-page_content-container h1 {
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 48px;
-    letter-spacing: 1px;
-    cursor: default;
-    user-select: none;
-    margin-inline: auto;
-}
-
-#feedback-page_content-container h2 {
-    margin-inline: auto;
-    margin-top: 0;
-    width: 650px;
-    font-weight: 300;
-    font-size: 26px;
-    cursor: default;
-    user-select: none;
-}
-
-#stars-container {
-    margin-top: 15px;
-    margin-bottom: 70px;
-}
-
-.stars {
-    margin: 5px;
-    fill: #0b113b;
-    cursor: pointer;
-}
-
-.stars-on-hover {
-    fill: #00FFFF;
-    filter: drop-shadow(0px 0px 5px #00ffffa5);
-}/*-------------------------------FEEDBACK PAGE SPECIFIC STYLE CODES-----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap'); /* font-weight 500 and 700 added */
 
 #feedback-page_content-container {
     margin-top: 60px;
@@ -53,8 +11,8 @@
 }
 
 #feedback-page_content-container h1 {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 17vh;
+    margin-bottom: 3vh;
     font-weight: 700;
     font-size: 48px;
     letter-spacing: 1px;
@@ -88,6 +46,7 @@
     fill: #00FFFF;
     filter: drop-shadow(0px 0px 5px #00ffffa5);
 }
+
 
 #comment-input {
     margin-top: 25px;
@@ -104,26 +63,6 @@
     margin-inline: auto;
 }
 
-#more-information-button {
-    margin-inline: auto;
-    margin-top: 50px;
-    width: 220px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 22px;
-    font-weight: 700;
-    color: #0b113b;
-    background-color: #00FFFF;
-}
-
-#more-information-button:hover {
-    box-shadow: 0px 0px 20px 5px#00ffffa5;
-}
-
-#feedback-page_content-container a {
-    text-decoration: none;
-}
-
 #comment-input {
     margin-top: 25px;
     padding-bottom: 8px;
@@ -152,6 +91,7 @@
 #more-information-button:hover {
     box-shadow: 0px 0px 20px 5px#00ffffa5;
 }
+
 
 #feedback-page_content-container a {
     margin-left: 44%;
