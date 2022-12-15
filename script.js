@@ -97,16 +97,6 @@ const questions = [
 ];
 let totalScore = 0;
 
-// function selectedAnswer(eventData) {
-//     let clicledAnswer = eventData.target
-//     let previousSelected = document.querySelector('.selected-answer')
-
-//     if (previousSelected !== null) {
-//         previousSelected.classList.remove('selected-answer')
-//     }
-//     clicledAnswer.classList.add('selected-answer')
-// }
-
 let questionNumber = 1;
 function displayQuestion() {
   let wrapNode = document.querySelector(".questions-container");
@@ -137,7 +127,7 @@ function displayQuestion() {
       answerContainerNode.appendChild(answerNode);
       answerNode.addEventListener("click", (event) => {
         if (event.target.innerText === correctAnswer) {
-          totalScore += 1;
+          totalScore++;
         }
         nextQuestion();
       });
@@ -149,12 +139,7 @@ function displayQuestion() {
 
     counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`;
   }
-
-  // let containerCount = document.getElementsByClassName('questions-container')
-  // let containerNum = document.getElementsByClassName('questions-count')
 }
-
-displayQuestion(); //add event listener
 
 let questionsArray = document.getElementsByClassName(
   "question-answer-container"
@@ -162,46 +147,34 @@ let questionsArray = document.getElementsByClassName(
 
 // TIMER
 
-let timeBackwards = document.getElementById("timer-number");
-
+let timerNumber = document.getElementById("timer-number");
 let removeIndex = -1;
 
-// let counter = 4;
-// setInterval(() => {
-//   if (counter < 0) {
-//     //this.takeTableDataCallInterval();
-//     counter = 4;
-//     startTimer();
-//   } else {
-//     timeBackwards.innerText = counter;
-//     counter--;
-//   }
-// }, 1000);
-
 let time = 20;
-timeBackwards.textContent = time;
+timerNumber.textContent = time;
 
-setInterval(function () {
-  time = --time <= 0 ? 20 : time;
-  //time--;
+var timer = setInterval(function () {
+  // time = --time <= 0 ? 20 : time;
+  if (time > -1) {
+    time--;
+    timerNumber.textContent = time;
+  }
 
-  timeBackwards.textContent = time;
-
-  if (time === 1) {
+  if (time === 0) {
     // changing the question when time is up
-    removeIndex++;
-    questionsArray[removeIndex].classList.toggle("hide");
-    time = 20 + 1;
+    time = 20;
     nextQuestion();
   }
 
-  if (time === 21) {
-    questionsArray[removeIndex + 1].classList.toggle("hide");
-  }
+  // time = 20;
+  // timerNumber.textContent = time;
+
+  // nextQuestion();
 
   if (removeIndex + 1 === questionsArray.length) {
     document.getElementById("questions-part").style.display = "none";
     document.getElementById("result_page_container").style.display = "flex";
+    clearInterval(timer);
   }
 }, 1000);
 
@@ -211,7 +184,7 @@ function nextQuestion() {
     document.querySelector(
       ".questions-count"
     ).innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`;
-    console.log(questionNumber);
+
     // makes the current question display-none, brings next question, restart the timer and animation
     time = --time <= 0 ? 20 : time;
 
@@ -220,7 +193,7 @@ function nextQuestion() {
     questionsArray[removeIndex + 1].classList.toggle("hide");
 
     time = 20;
-    timeBackwards.textContent = time;
+    timerNumber.textContent = time;
 
     let countdownCircleCircle = document.querySelector(
       ".countdown-circle circle"
@@ -230,9 +203,13 @@ function nextQuestion() {
       animation.cancel();
       animation.play();
     });
+    if (questionNumber === questions.length) {
+      let finalScore = totalScore;
+      window.localStorage.setItem("newScore", finalScore);
+      showResults(localStorage.getItem("newScore"));
+    }
   } else {
     document.getElementById("questions-part").style.display = "none";
     document.getElementById("result_page_container").style.display = "flex";
   }
 }
-console.log(totalScore);

@@ -1,16 +1,17 @@
 
-// console.log(totalScore);
-// let totalQuestions = 10;
 
-// function showResults() {
+// let correctAnswers = window.localStorage.getItem('newScore')
+let totalQuestions = 10;
 
-//     //creating the var for the inner text 
-//     let numberOfCorrectAnswers = totalScore;
-//     let numberOfWrongAnswers = totalQuestions - totalScore;
-    
-//     //calculating percentage
-//     let percentageOfCorrectAnswers = numberOfCorrectAnswers / totalQuestions * 100;
-//     let percentageOfWrongAnswers = numberOfWrongAnswers / totalQuestions * 100;
+function showResults(result) {
+
+    //creating the var for the inner text 
+    let numberOfCorrectAnswers = result;
+    let numberOfWrongAnswers = totalQuestions - result;
+
+    //calculating percentage
+    let percentageOfCorrectAnswers = numberOfCorrectAnswers / totalQuestions * 100;
+    let percentageOfWrongAnswers = numberOfWrongAnswers / totalQuestions * 100;
 
 //     //document.querySelector("avg").setAttribute("stroke-dasharray", circleDasharray)
 
@@ -47,7 +48,8 @@
 //     document.getElementById("notification_for_passing").appendChild(messageOfSuccessOrFail);
 //     document.getElementById("notification_for_passing").appendChild(messageWhatHappensNext);
 
-// }
+
+}
 
 // showResults();
 
