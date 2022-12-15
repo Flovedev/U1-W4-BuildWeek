@@ -5,6 +5,7 @@
     text-align: center;
     display: none;
     flex-direction: column;
+    display: none;
 }
 #result_page_container{
     height: 100vh;
@@ -24,7 +25,7 @@
 }
 
 #result_title h1 {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 3em;
 }
 
@@ -77,6 +78,7 @@
 #notification_for_passing {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-bottom: 1em;
     width: 18em;
@@ -90,14 +92,6 @@
     border-radius: 100%;
 }
 
-/* #notification_for_passing::after {
-    position: flex;
-    width: 15em;
-    height: 15em;
-    background: none;
-    border-radius: 50%;
-    
-} */
 
 .congratulations_or_condolences {
     margin: 0;
@@ -118,22 +112,6 @@
 }
 
 
-/* #result_donut {
-    display: flex;
-
-    position: absolute;
-    width: 40em;
-}
-svg circle {
-    stroke-dasharray: 140px;
-    stroke-dashoffset: 0px;
-    stroke-linecap: butt;
-    stroke-width: 8px;
-    stroke: white;
-    fill: none;
-} */
-
-
 /* footer */
 
 
@@ -141,9 +119,7 @@ svg circle {
 #button_to_rating {
     background: none;
     color: white;
-    font-size: 20px;
-    width: 200px;
-    height: 55px;
+    font-size: 1.25em;
     border: 2px solid white;
     cursor: pointer;
     margin: auto;
@@ -151,9 +127,9 @@ svg circle {
 }
 
 #result_footer {
-
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 
