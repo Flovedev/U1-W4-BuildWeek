@@ -19,7 +19,7 @@
 }
 
 .question-quetions-part {
-    display: none;
+    /* display: none; */
 
     position: absolute;
     height: 400px;
