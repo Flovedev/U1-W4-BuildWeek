@@ -81,12 +81,12 @@ function showResults(result) {
     congratulationsOrCondolences.innerText = "Congratulations!";
     messageOfSuccessOrFail.innerText = "You passed the exam.";
     messageWhatHappensNext.innerText =
-      "We'll you the certificate in few mintutes. \nCheck your email (including promotions / spam folder)";
+      "We'll you the certificate in few minutes. \nCheck your email (including promotions / spam folder)";
   } else {
     congratulationsOrCondolences.innerText = "We are sorry.";
     messageOfSuccessOrFail.innerText = "You didn't pass the exam.";
     messageWhatHappensNext.innerText =
-      "We'll contact you in a few minutes to send you the informations concerning your assessment interview. \nCheck your email (including promotions / spam folder)";
+      "We'll contact you in a few minutes to send you the information concerning your assessment interview. \nCheck your email (including promotions / spam folder)";
   }
   let blueResultDonut = document.getElementById("correct-answer-donut");
 
