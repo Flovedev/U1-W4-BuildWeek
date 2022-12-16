@@ -1,4 +1,4 @@
-#welcomePage{
+#welcomePage {
     margin-left: 9%;
     display: block;
     height: 100vh;
@@ -7,25 +7,29 @@
     margin-top: 10vh;
     font-size: 2vh;
 }
-h3{
+
+h3 {
     font-family: Outfit, sans-serif;
     font-size: 27px;
     color: #D20094;
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: larger;
 }
-p{
+
+p {
     font-family: Inter, sans-serif;
     max-width: 60%;
     font-size: larger;
 }
-ul{
+
+ul {
     font-family: Inter, sans-serif;
     font-size: 15.5px;
     margin: 40px 0;
     font-size: larger;
 }
-input[type=button]{
+
+#proceedBtn {
     background: #00ffff;
     padding: 2vh 9vh;
     color: #000000;
@@ -33,13 +37,15 @@ input[type=button]{
     font: normal bold 26px/1 "Roboto", sans-serif;
     text-align: center;
     margin-left: 74vh;
-    border-color:transparent;
+    border-color: transparent;
 
 }
+
 input[type="checkbox"] {
     display: none;
-  }
-input[type="checkbox"] + *::before {
+}
+
+input[type="checkbox"]+*::before {
     content: "";
     display: inline-block;
     vertical-align: bottom;
@@ -51,19 +57,21 @@ input[type="checkbox"] + *::before {
     border-color: white;
     margin-bottom: 2.5vh;
     margin-right: 2vh;
-  }
-  input[type="checkbox"]:checked + *::before {
+}
+
+input[type="checkbox"]:checked+*::before {
     color: white;
     background: white;
-  }
+}
 
-input[type=button]:hover{
-    box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
-    -webkit-box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
-    -moz-box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
+#proceedBtn:hover {
+    box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
+    -webkit-box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
+    -moz-box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
     accent-color: #00FFFF;
 }
-input[type=button]:active{
+
+#proceedBtn:active {
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
     box-shadow: inset 0px 0px 5px #c1c1c1;

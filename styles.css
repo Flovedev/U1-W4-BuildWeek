@@ -9,6 +9,7 @@
 .questions-container {
     display: flex;
     justify-content: center;
+    font-family: 'Outfit';
 }
 
 .question-answer-container {
@@ -32,27 +33,79 @@
 
 
 .answers {
+    position: relative;
     display: inline-block;
     text-align: center;
     width: 345px;
     height: auto;
     margin: 10px 20px 10px 28px;
-    border: 2px solid;
     border-radius: 50px;
     cursor: pointer;
     padding: 20px 5px 20px 5px;
     background-color: rgba(255, 255, 255, 15%);
 }
 
+.answers::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    border: 3px solid transparent;
+    background: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+#next-button {
+    position: absolute;
+    bottom: 3em;
+    left: 40%;
+    width: 20%;
+    margin: auto;
+    background: #ff00bb;
+    padding: 2vh 9vh;
+    color: #ffffff;
+    display: block;
+    font: normal bold 26px/1 "Roboto", sans-serif;
+    text-align: center;
+    border: 1px solid;
+    /* border-color: transparent; */
+    border-radius: 40px;
+}
+
+#next-button:hover {
+    box-shadow: 0px -1px 32px 0px rgba(255, 0, 234, 0.75);
+    -webkit-box-shadow: 0px -1px 32px 0px rgba(234, 0, 255, 0.75);
+    -moz-box-shadow: 0px -1px 32px 0px rgba(255, 0, 225, 0.75);
+    accent-color: #ff00d4;
+    background: rgb(36, 41, 46);
+    background: linear-gradient(180deg, rgba(36, 41, 46, 1) 0%, rgba(241, 0, 178, 1) 0%, rgba(103, 0, 71, 1) 100%);
+}
+
+#next-button:active {
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+}
+
+
 .answers:hover {
-    background-color: #BA018A;
+    background: rgb(36, 41, 46);
+    background: linear-gradient(180deg, rgba(36, 41, 46, 1) 0%, rgba(241, 0, 178, 1) 0%, rgba(103, 0, 71, 1) 100%);
 }
 
 .questions-count {
-
+    position: absolute;
+    bottom: 1em;
+    left: 40%;
+    width: 20%;
+    margin: auto;
     text-align: center;
-
-
 }
 
 .questions-count span {
@@ -135,7 +188,7 @@
     stroke-width: 12px;
     stroke: #00FFFF;
     fill: none;
-    animation: countdown 21s linear infinite forwards;
+    animation: countdown 20.8s linear infinite forwards;
 }
 
 .greyish-circle {
