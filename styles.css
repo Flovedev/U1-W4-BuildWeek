@@ -75,6 +75,7 @@
     border: 1px solid;
     /* border-color: transparent; */
     border-radius: 40px;
+    cursor: pointer;
 }
 
 #next-button:hover {
