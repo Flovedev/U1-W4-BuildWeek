@@ -117,7 +117,7 @@
     display: none;
 }
 
-.selected-answer {
+.answers.selected {
     background-color: rgb(161, 41, 141);
 }
 

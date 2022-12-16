@@ -6,6 +6,17 @@ for (let i = 0; i < starsNode.length; i++) {
   star.addEventListener("click", function () {
     let numberOfStars = i + 1; // Storing the number of stars that user gave by printing out.
     star.classList.add("selectedStars");
+    for (let starToBePink = 0; starToBePink <= i; starToBePink++) {
+      starsNode[starToBePink].classList.add("selectedPink");
+    }
+
+    for (
+      let starNotToBePink = starsNode.length - 1;
+      starNotToBePink > i;
+      starNotToBePink--
+    ) {
+      starsNode[starNotToBePink].classList.remove("selectedPink");
+    }
     console.log(`User gave us ${numberOfStars} stars out of 10.`); // (Since 'i' is the index number it starts from 0. That's why I added 1 to i to get the actual number of stars.)
   });
 
