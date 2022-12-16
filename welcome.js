@@ -16,8 +16,6 @@ btn.addEventListener("click", () => {
 
     var timer = setInterval(function () {
       if (time > -1) {
-        console.log(time);
-        // time = time <= 0 ? 20 : time;
         time--;
 
         let timerNumber = document.getElementById("timer-number");

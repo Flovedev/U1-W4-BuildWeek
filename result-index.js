@@ -11,8 +11,6 @@ function showResults(result) {
     (numberOfCorrectAnswers / totalQuestions) * 100;
   let percentageOfWrongAnswers = (numberOfWrongAnswers / totalQuestions) * 100;
 
-  //document.querySelector("avg").setAttribute("stroke-dasharray", circleDasharray)
-
   //adding inner text
   document.getElementById(
     "percentage_of_correct_answers"
@@ -94,18 +92,14 @@ function showResults(result) {
   let pixelsToBeShowed2 =
     (((2 * 22) / 7) * 175 * percentageOfWrongAnswers) / 100;
 
-  blueResultDonut.style.strokeDashoffset = `${
-    (pixelsToBeShowed1, pixelsToBeShowed2)
-  }px`;
+  blueResultDonut.style.strokeDashoffset = `${(pixelsToBeShowed1, pixelsToBeShowed2)
+    }px`;
 
   blueResultDonut.style.stroke = `#00FFFF`;
 }
 
-// showResults();
-
 let buttonToRatingNode = document.getElementById("button_to_rating");
 buttonToRatingNode.addEventListener("click", () => {
-  console.log("works");
   document.getElementById("result_page_container").style.display = "none";
   document.getElementById("feedback-page_content-container").style.display =
     "inline";

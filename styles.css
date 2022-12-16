@@ -73,7 +73,6 @@
     font: normal bold 26px/1 "Roboto", sans-serif;
     text-align: center;
     border: 1px solid;
-    /* border-color: transparent; */
     border-radius: 40px;
     cursor: pointer;
 }
@@ -122,17 +121,11 @@
 }
 
 #timer {
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* position: sticky; */
     position: absolute;
     top: 2em;
     right: 7em;
     height: 9em;
     width: 9em;
-    /* text-align: center; */
     font-family: 'Outfit', sans-serif;
 }
 

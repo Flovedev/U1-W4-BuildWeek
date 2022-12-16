@@ -29,7 +29,8 @@ ul {
     font-size: larger;
 }
 
-#proceedBtn, #button_to_rating {
+#proceedBtn,
+#button_to_rating {
     background: #00ffff;
     padding: 2vh 9vh;
     color: #000000;
@@ -38,7 +39,7 @@ ul {
     text-align: center;
     margin-left: 74vh;
     border-color: transparent;
-
+    cursor: pointer;
 }
 
 input[type="checkbox"] {
@@ -57,6 +58,7 @@ input[type="checkbox"]+*::before {
     border-color: white;
     margin-bottom: 2.5vh;
     margin-right: 2vh;
+    cursor: pointer;
 }
 
 input[type="checkbox"]:checked+*::before {
@@ -64,14 +66,16 @@ input[type="checkbox"]:checked+*::before {
     background: white;
 }
 
-#proceedBtn:hover, #button_to_rating:hover {
+#proceedBtn:hover,
+#button_to_rating:hover {
     box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
     -webkit-box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
     -moz-box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
     accent-color: #00FFFF;
 }
 
-#proceedBtn:active, #button_to_rating:active {
+#proceedBtn:active,
+#button_to_rating:active {
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
     box-shadow: inset 0px 0px 5px #c1c1c1;
