@@ -120,39 +120,41 @@ function displayQuestion() {
     answer.sort(() => 0.5 - Math.random());
 
     for (let i = 0; i < answer.length; i++) {
-      
+
       let answerNode = document.createElement("div");
 
       answerNode.innerText = answer[i];
       answerNode.classList.add("answers");
       // answerNode.addEventListener('click', nextQuestion);
       answerContainerNode.appendChild(answerNode);
-      answerNode.addEventListener('click', (event) =>{
-        if(document.getElementsByClassName('selected').length === 0){
+      answerNode.addEventListener('click', (event) => {
+        if (document.getElementsByClassName('selected').length === 0) {
           event.target.classList.add('selected');
           currentAnswer = event.target.innerText;
-      
-        }else if(document.getElementsByClassName('selected').length === 1){
+
+        } else if (document.getElementsByClassName('selected').length === 1) {
           document.getElementsByClassName('selected')[0].classList.remove('selected');
           event.target.classList.add('selected');
           currentAnswer = event.target.innerText;
-           
+
         }
-        if(currentAnswer === correctAnswer){
+        if (currentAnswer === correctAnswer) {
           isTrue = true;
-       }else{
-        isTrue = false;
-       }
+
+        } else {
+          isTrue = false;
+
+        }
       })
 
-      }
+    }
     allNode.appendChild(questionsNode);
     allNode.appendChild(answerContainerNode);
     wrapNode.appendChild(allNode);
 
     counterNode.innerHTML = `QUESTION ${questionNumber} <span>/ ${questions.length}</span>`;
   }
-  
+
 }
 
 let questionsArray = document.getElementsByClassName(
@@ -169,8 +171,10 @@ time = 20;
 timerNumber.textContent = time;
 
 function nextQuestion() {
-if (isTrue) {
+
+  if (isTrue) {
     totalScore++;
+    isTrue = false
   }
   if (questions.length > questionNumber) {
     time = 20;
@@ -204,4 +208,4 @@ if (isTrue) {
     document.getElementById("questions-part").style.display = "none";
     document.getElementById("result_page_container").style.display = "flex";
   }
-  }
+}
