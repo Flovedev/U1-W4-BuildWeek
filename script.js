@@ -95,10 +95,12 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+
 let totalScore = 0;
 let currentAnswer = '';
 let isTrue = false;
 let questionNumber = 1;
+
 function displayQuestion() {
   let wrapNode = document.querySelector(".questions-container");
   let counterNode = document.querySelector(".questions-count");
@@ -125,28 +127,22 @@ function displayQuestion() {
 
       answerNode.innerText = answer[i];
       answerNode.classList.add("answers");
-      // answerNode.addEventListener('click', nextQuestion);
       answerContainerNode.appendChild(answerNode);
       answerNode.addEventListener('click', (event) => {
         if (document.getElementsByClassName('selected').length === 0) {
           event.target.classList.add('selected');
           currentAnswer = event.target.innerText;
-
         } else if (document.getElementsByClassName('selected').length === 1) {
           document.getElementsByClassName('selected')[0].classList.remove('selected');
           event.target.classList.add('selected');
           currentAnswer = event.target.innerText;
-
         }
         if (currentAnswer === correctAnswer) {
           isTrue = true;
-
         } else {
           isTrue = false;
-
         }
       })
-
     }
     allNode.appendChild(questionsNode);
     allNode.appendChild(answerContainerNode);
