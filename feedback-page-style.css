@@ -1,25 +1,6 @@
-body {
-    margin: 0px;
-    background-color: black;
-}
-
-#main-container {
-    width: 1024px;
-    height: 768px;
-    background-image: url(./assets/bg.jpg);
-    margin-inline: auto;
-}
-
-#logo img {
-    display: inline-block;
-
-    width: 156px;
-    height: auto;
-    margin-top: 50px;
-    margin-left: 85px;
-}
-
 /*-------------------------------FEEDBACK PAGE SPECIFIC STYLE CODES-----------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap'); /* font-weight 500 and 700 added */
 
 #feedback-page_content-container {
     margin-top: 60px;
@@ -29,13 +10,15 @@ body {
     display: none;
 }
 
-#feedback-page_content-container h1{
-    margin-bottom: 20px;
+#feedback-page_content-container h1 {
+    margin-top: 17vh;
+    margin-bottom: 3vh;
     font-weight: 700;
     font-size: 48px;
     letter-spacing: 1px;
     cursor: default;
     user-select: none;
+    margin-inline: auto;
 }
 
 #feedback-page_content-container h2 {
@@ -51,30 +34,39 @@ body {
 #stars-container {
     margin-top: 15px;
     margin-bottom: 70px;
-} 
+}
 
 .stars {
     margin: 5px;
     fill: #0b113b;
     cursor: pointer;
+    filter: drop-shadow(0px 0px 0.75px white);
 }
 
 .stars-on-hover {
+    fill:#21adad7f;
+    filter: drop-shadow(0px 0px 2px #12a2a2);
+}
+
+.selectedPink {
     fill: #00FFFF;
     filter: drop-shadow(0px 0px 5px #00ffffa5);
 }
+
 
 #comment-input {
     margin-top: 25px;
     padding-bottom: 8px;
     padding-left: 25px;
-    width: 65%;
+    width: 47%;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid #c33a8e;
     font-size: 18px;
     color: #c33a8e;
+    display: block;
+    margin-inline: auto;
 }
 
 #more-information-button {
@@ -91,8 +83,12 @@ body {
 
 #more-information-button:hover {
     box-shadow: 0px 0px 20px 5px#00ffffa5;
-} 
+}
+
 
 #feedback-page_content-container a {
+    margin-left: 44%;
+    display: inline-block;
     text-decoration: none;
+    width: 220px;
 }

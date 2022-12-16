@@ -1,49 +1,77 @@
-#welcomePage{
+#welcomePage {
     margin-left: 9%;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    line-height: 5vh;
+    margin-top: 10vh;
+    font-size: 2vh;
 }
-h3{
+
+h3 {
     font-family: Outfit, sans-serif;
     font-size: 27px;
     color: #D20094;
-    font-weight:bolder;
+    font-weight: bolder;
+    font-size: larger;
 }
-p{
+
+p {
     font-family: Inter, sans-serif;
     max-width: 60%;
-    font-size: 16px;
+    font-size: larger;
 }
-ul{
+
+ul {
     font-family: Inter, sans-serif;
     font-size: 15.5px;
     margin: 40px 0;
+    font-size: larger;
 }
-#proceed{
-    background-color:none;
-}
-input[type=button]{
+
+#proceedBtn, #button_to_rating {
     background: #00ffff;
-    padding: 20px 45px;
+    padding: 2vh 9vh;
     color: #000000;
     display: inline-block;
     font: normal bold 26px/1 "Roboto", sans-serif;
     text-align: center;
-    margin-left: 200px;
-    border-color:transparent;
+    margin-left: 74vh;
+    border-color: transparent;
 
 }
-input[type=checkbox]{
-    outline: 1px solid #ffffff;
+
+input[type="checkbox"] {
+    display: none;
 }
-input[type=checkbox]:checked{
+
+input[type="checkbox"]+*::before {
+    content: "";
     display: inline-block;
+    vertical-align: bottom;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.3vh;
+    border-color: white;
+    margin-bottom: 2.5vh;
+    margin-right: 2vh;
 }
-input[type=button]:hover{
-    box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
-    -webkit-box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
-    -moz-box-shadow: 0px -1px 32px 0px rgba(0,255,255,0.75);
+
+input[type="checkbox"]:checked+*::before {
+    color: white;
+    background: white;
+}
+
+#proceedBtn:hover, #button_to_rating:hover {
+    box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
+    -webkit-box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
+    -moz-box-shadow: 0px -1px 32px 0px rgba(0, 255, 255, 0.75);
     accent-color: #00FFFF;
 }
-input[type=button]:active{
+
+#proceedBtn:active, #button_to_rating:active {
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
     box-shadow: inset 0px 0px 5px #c1c1c1;
