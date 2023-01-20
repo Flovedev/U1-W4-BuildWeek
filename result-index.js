@@ -92,8 +92,9 @@ function showResults(result) {
   let pixelsToBeShowed2 =
     (((2 * 22) / 7) * 175 * percentageOfWrongAnswers) / 100;
 
-  blueResultDonut.style.strokeDashoffset = `${(pixelsToBeShowed1, pixelsToBeShowed2)
-    }px`;
+  blueResultDonut.style.strokeDashoffset = `${
+    (pixelsToBeShowed1, pixelsToBeShowed2)
+  }px`;
 
   blueResultDonut.style.stroke = `#00FFFF`;
 }
